@@ -1,0 +1,375 @@
+:root {
+  font-size: 62.5%;
+  --primary: #0d1117;
+  --secondary: #161b22;
+  --font: #ededed;
+  --button01: #ed0000;
+  --button02: #ed3300;
+  --button03: #ed7733;
+  --highlights: #009999;
+  --smallSpacer: 0.5rem;
+  --mediumSpacer: 1rem;
+  --largeSpacer: 1.5rem;
+  --xlargeSpacer: 2.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--highlights);
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+// Global settings
+h1,h2,h3,h4{
+  width: 100%;
+}
+
+h2{
+  margin: var(--largeSpacer) 0 var(--smallSpacer);
+  padding: var(--mediumSpacer) 0 var(--smallSpacer);
+}
+
+.spacer{
+  max-width: 40%;
+}
+
+.button {
+  background-color: var(--button03);
+  color: #fff;
+  width: 13.5rem;
+  padding: var(--mediumSpacer) var(--largeSpacer);
+  margin: 0 1rem;
+  border: solid 1px;
+  border-radius: 0.8rem;
+}
+
+a{
+  width: 100%;
+  color: var(--font);
+  text-decoration: none;
+}
+
+a:hover{
+  background-color: #ccccccee;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+// header
+.headerContainer{
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  padding: 0 var(--mediumSpacer) ;
+
+  .logoContainer{
+    width: 15rem;
+    height: 100%;
+    display: flex;
+
+    img{
+      height: 100%;
+    }
+  }
+
+  .socialContainer{
+    width: 25rem;
+    display: flex;
+    align-items: center;
+
+    a{
+      width: 6rem;
+      height: 6rem;
+      font-size: 3rem;
+      margin: var(--mediumSpacer) var(--smallSpacer);
+      margin-top: var(--mediumSpacer);
+      padding: var(--smallSpacer) var(--mediumSpacer);
+      border: solid;
+    }
+
+    .discord{
+      padding: var(--smallSpacer);
+    }
+  }
+}
+
+// Navbar
+.navbarContainer {
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: end;
+  padding: 2rem;
+  margin: 0 0 3rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  .dropdownMenu{
+    background-color: var(--secondary);
+    width: 16rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 7.5rem;
+    right: 0.5rem;
+    padding: 1rem;
+    box-shadow:
+    var(--highlights) 1px 1px 1px,
+    var(--highlights) -1px -1px 1px,
+    var(--highlights) -1px 1px 1px,
+    var(--highlights) 1px -1px 1px;
+
+    .button{
+      width: 14rem;
+      padding:0;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .navbarContainer{
+    padding: 2rem 0.5rem;
+
+    .dropdownMenu{
+      width: 25rem;
+      padding: 0.5rem;
+  
+      .button{
+        margin: 0.4rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+  }
+
+  .spacer{
+    width: 0%;
+  }
+}
+
+// news Settings
+.basicNewsCard {
+  background-color: var(--secondary);
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5rem auto;
+  padding: 1rem;
+
+  h2 {
+    width: 80%;
+    text-align: start;
+    border: solid;
+  }
+
+  .date {
+    width: 20%;
+    text-align: end;
+    border: solid;
+  }
+
+  .newsContent {
+    margin: 0.5rem 0;
+    border: solid;
+  }
+
+  .newsFooter {
+    width: 100%;
+    text-align: end;
+  }
+}
+
+// shop settings
+.basicShopCard {
+  background-color: var(--secondary);
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5rem auto;
+  padding: 2rem 3rem;
+  
+  h2 {
+    margin: 1rem 0;
+    text-align: start;
+    border: solid;
+  }
+
+  .image{
+    width: 20%;
+    margin: 2rem 0;
+    border: solid;
+
+    img{
+      width: 100%;
+      border: solid;
+    }
+  }
+
+  .shopContent {
+    width: 75%;
+    margin: 1rem 2rem;
+    border: solid;
+  }
+
+  .shopFooter {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+
+    .button{
+      width: 14rem;
+    }
+  }
+}
+
+
+// Streamplan
+.streamplanContainer{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: var(--largeSpacer);
+  border: solid;
+
+  .planContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: auto;
+  
+    .planCard{
+      width: 100%;
+      height: 22rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      vertical-align: middle;
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin: 0.7rem;
+      border: solid var(--secondary);
+       
+      .day, .video, .freeContainer{
+        width: 40%;
+        max-height: 20rem;
+      }
+
+      video{
+        height: 19rem;
+      }
+    }
+  }
+
+  .planContentConatiner{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footerContainer{
+  background-color: var(--secondary);
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--xlargeSpacer);
+  padding: var(--xlargeSpacer);
+
+  .aboutContainer{
+    width: 33%;
+  }
+
+  .linkContainer{
+    width: 33%;
+  }
+  
+    ul li{
+      list-style: none;
+    }
+}
+
+// Mediaquerry
+@media only screen and (max-width: 1200px) {
+  .streamplanContainer{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: var(--largeSpacer);
+    border: solid;
+  
+    .planContainer{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      margin: auto;
+
+  .planCard{
+    width: 100%;
+    height: 22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 0.7rem;
+    border: solid red;
+
+    .day, .video, .freeContainer{
+      width: 50%;
+      max-height: 20rem;
+      border: solid;
+    }
+  }}
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .streamplanContainer{
+    flex-direction: column;
+    padding:0;
+    border: solid red;
+
+    .planContainer{
+      width: 100%;
+
+      .planCard{
+        width: 100%;
+        min-height: 30rem;
+        justify-content: space-around;
+        flex-direction: column;
+
+        .video{
+          width: 100%;
+          
+          video{
+            width: 100%
+          }
+        }
+      }
+    }
+  }  
+}
