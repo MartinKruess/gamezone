@@ -388,6 +388,14 @@ a:hover{
   border: var(--font) solid 1px;
 }
 
+.createArticle{
+  background-color:lightgreen;
+    width: 40%;
+    margin: var(--mediumSpacer);
+    padding: var(--mediumSpacer);
+    border-radius: var(--smallSpacer);
+}
+
 
 
 .footerContainer{

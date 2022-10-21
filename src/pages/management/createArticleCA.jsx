@@ -30,10 +30,12 @@ export const CreateArticleCA = () => {
           className="newSpan"
           onClick={() => setSpans([...spans, "span"])}
         >
-          +
+          + add span
         </button>
       )}
-      <button type="submit">Create</button>
+      <button className="createArticle" type="submit">
+        Artikel erstellen
+      </button>
     </article>
   );
 };
