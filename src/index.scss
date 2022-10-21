@@ -290,7 +290,7 @@ a:hover{
 .footerContainer{
   background-color: var(--secondary);
   width: 100%;
-  height: 15rem;
+  height: 13.5rem;
   display: flex;
   flex-wrap: wrap;
   margin-top: var(--xlargeSpacer);
@@ -307,6 +307,42 @@ a:hover{
     ul li{
       list-style: none;
     }
+}
+
+.loginPage{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loginContainer{
+    width: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--xlargeSpacer);
+    border: solid;
+    border-radius: var(--mediumSpacer);
+  
+    label{
+      width: 100%;
+      margin: var(--smallSpacer);
+    }
+  
+    input{
+      width: 100%;
+      padding: var(--smallSpacer) var(--mediumSpacer);
+      border-radius: var(--smallSpacer);
+    }
+
+    button{
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-top: var(--mediumSpacer);
+      padding: var(--smallSpacer) var(--mediumSpacer);
+      border-radius: var(--mediumSpacer);
+    }
+  }
 }
 
 // Mediaquerry

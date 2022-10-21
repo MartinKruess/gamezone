@@ -10,6 +10,7 @@ import { Streamplan } from "./pages/streamplan";
 import { Technikshop } from "./pages/technikshop";
 import { Shop } from "./pages/shop";
 import { Footer } from "./components/reusables/footer";
+import { Login } from "./pages/loginpage";
 
 export const backendURL = "http://localhost:4000";
 
@@ -29,6 +30,8 @@ function App() {
         <Route exact path="/shop/technik" element={<Technikshop />} />
         <Route exact path="/shop/extras" element={<Shop />} />
 
+        <Route exact path="/c_management_01/login" element={<Login />} /> 
+
         {/* Footer & more */}
         {/* <Route exact path="/partners" element={<Partner />} />
         <Route exact path="/" element={<Contact />} />
@@ -36,8 +39,7 @@ function App() {
         <Route exact path="/" element={<Datenschutz />} /> */}
 
         {/* Specials */}
-        {/* <Route exact path="/" element={<Special01 />} />
-        <Route exact path="/" element={<Special02 />} /> */}
+        {/* <Route exact path="/" element={<Special01 />} /> */}
 
         {/* TESTSEITE */}
         {/* <Route exact path="/test" element={<Testpage />} />  */}
