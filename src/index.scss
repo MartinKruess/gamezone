@@ -59,6 +59,13 @@ h2{
   border-radius: 0.8rem;
 }
 
+button:hover{
+  background-color: #ccccccee;
+  color: var(--secondary);
+  font-weight: 600;
+  border: solid 3px var(--button03);
+}
+
 a{
   width: 100%;
   color: var(--font);
