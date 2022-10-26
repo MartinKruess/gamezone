@@ -59,6 +59,13 @@ h2{
   border-radius: 0.8rem;
 }
 
+button:hover{
+  background-color: #ccccccee;
+  color: var(--secondary);
+  font-weight: 600;
+  border: solid 3px var(--button03);
+}
+
 a{
   width: 100%;
   color: var(--font);
@@ -248,7 +255,7 @@ a:hover{
   flex-wrap: wrap;
   margin: auto;
   padding: var(--largeSpacer);
-  border: solid;
+  border: solid 1px;
 
   .planContainer{
     width: 100%;
@@ -258,6 +265,7 @@ a:hover{
     margin: auto;
   
     .planCard{
+      background-color: var(--secondary);
       width: 100%;
       height: 22rem;
       display: flex;
@@ -268,15 +276,28 @@ a:hover{
       font-weight: 600;
       margin: 0.7rem;
       border: solid var(--secondary);
-       
+      
+      .streamHeader{
+        font-size: 2rem;
+        padding: var(--mediumSpacer)
+      }
+
       .day, .video, .freeContainer{
         width: 40%;
-        max-height: 20rem;
+        
+      }
+
+      .freeContainer{
+        margin: auto;
       }
 
       video{
         height: 19rem;
       }
+    }
+
+    .free{
+      height: 12rem;
     }
   }
 
@@ -286,6 +307,103 @@ a:hover{
     flex-direction: column;
   }
 }
+
+// Celest Abyss
+
+.createForm{
+  background-color: var(--secondary);
+  width: 80%;
+  height: 60rem;
+  margin: auto;
+  padding: var(--mediumSpacer);
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px;
+
+  label{
+    font-size: 2rem;
+    margin: var(--smallSpacer);
+    padding: var(--smallSpacer) var(--largeSpacer);
+    border: solid 1px;
+  }
+
+  input{
+    width: 70%;
+    font-size: 2rem;
+    margin: var(--smallSpacer) var(--mediumSpacer);
+    padding: var(--smallSpacer);
+    border-radius: var(--smallSpacer);
+  }
+
+  .counter{
+    position: relative;
+    top: -2.5rem;
+    left: 92%;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 62%;
+    max-height: 67%;
+    line-height: 1.7rem;
+    margin: var(--mediumSpacer) auto;
+    padding: var(--smallSpacer);
+  }
+
+  button{
+    background-color:lightgreen;
+    width: 20%;
+    height: 4rem;
+    padding: var(--smallSpacer);
+    border-radius: 2rem;
+  }
+}
+
+.articleMenu{
+  width: 80%;
+  display: flex;
+  margin: auto;
+  padding: var(--mediumSpacer);
+
+  button{
+    width: 50%;
+    margin: 0.2rem;
+    padding: var(--mediumSpacer);
+    border: solid 1px;
+    border-radius: 1rem  1rem 0rem 0rem
+    ;
+  }
+}
+
+.newSpan{
+  background-color: var(--secondary);
+  color: #999;
+  width: 80%;
+  margin: var(--mediumSpacer);
+  padding: var(--mediumSpacer);
+  border: #999 solid 1px;
+  border-radius: var(--smallSpacer);
+}
+
+.newSpan:hover{
+  color: var(--font);
+  border: var(--font) solid 1px;
+}
+
+.createArticle{
+  background-color:lightgreen;
+    width: 40%;
+    margin: var(--mediumSpacer);
+    padding: var(--mediumSpacer);
+    border-radius: var(--smallSpacer);
+}
+
+
 
 .footerContainer{
   background-color: var(--secondary);
@@ -353,7 +471,7 @@ a:hover{
     flex-wrap: wrap;
     margin: auto;
     padding: var(--largeSpacer);
-    border: solid;
+   
   
     .planContainer{
       width: 100%;
@@ -362,24 +480,28 @@ a:hover{
       justify-content: start;
       margin: auto;
 
-  .planCard{
-    width: 100%;
-    height: 22rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    font-size: 2.6rem;
-    font-weight: 600;
-    margin: 0.7rem;
-    border: solid red;
+      .planCard{
+        width: 100%;
+        height: 22rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        font-size: 2.6rem;
+        font-weight: 600;
+        margin: 0.7rem;
+        padding: var(--smallSpacer);
+        
 
-    .day, .video, .freeContainer{
-      width: 50%;
-      max-height: 20rem;
-      border: solid;
+        .day, .video, .freeContainer{
+          width: 50%;
+        }
+      }
+
+      .free{
+        height: 12rem;
+      }
     }
-  }}
   }
 }
 
@@ -394,9 +516,13 @@ a:hover{
 
       .planCard{
         width: 100%;
-        min-height: 30rem;
+        height: 33rem;
         justify-content: space-around;
         flex-direction: column;
+        
+        .day{
+          margin: var(--mediumSpacer) 0;
+        }
 
         .video{
           width: 100%;
@@ -405,6 +531,10 @@ a:hover{
             width: 100%
           }
         }
+      }
+
+      .free{
+        height: 12rem;
       }
     }
   }  
