@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/shop/technik" element={<Technikshop />} />
         <Route exact path="/shop/extras" element={<Shop />} />
 
-        <Route exact path="/managment/ca_article" element={<CaArticle />} />
+        <Route exact path="/managment/celestAbyss" element={<CaArticle />} />
 
         {/* Footer & more */}
         {/* <Route exact path="/partners" element={<Partner />} />
