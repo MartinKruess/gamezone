@@ -1,22 +1,40 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { backendURL } from "../App"
+import { AppContext } from "../global/useContext"
 
 export const Login = () => {
+    const {setToken} = useContext(AppContext)
     const [loginName, setLoginName] = useState("")
     const [password, setPassword] = useState("")
     const loginData = {
-        name: loginName,
+        username: loginName,
         password: password,
     }
     useEffect(() => {
-        console.log(loginData)
+        console.log("loginData", loginData)
     }, [password])
 
-    const onLogin = () => {
+    const onLogin = async (e) => {
+        e.preventDefault()
         if(loginName && password) {
-            fetch(`${backendURL}/login`)
-            .then((response) => response.json())
-            .then((data) => console.log(data));
+            const res = await fetch(`${backendURL}/login`, {
+                method: 'post',
+                withCredentials: true,
+          
+                headers: {
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(loginData),
+              })
+          
+              const resData = await res.json()
+              console.log('resData', resData)
+              setToken(resData.auth)
+              // setUserData(resData.userData)
+              // saveInLocalStorage('auth', resData.auth)
+              // saveInLocalStorage('user', resData.userData)
+              // res.status === 200 && navigate('/dashboard', { replace: true })
         }
     }
 

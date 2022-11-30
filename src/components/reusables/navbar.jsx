@@ -8,15 +8,12 @@ export const Navbar = () => {
   const toggleDropdown = () => {
     setDrop(!drop);
   };
-  console.log(drop)
 
   return (
     <section className="navbarContainer">
-      <Link className="spacer"></Link>
-      <Link className="button" to="/live/streamplan" >Streamplan</Link>
-      <Link className="button" to="/mygame/celestabyss" >Celest Abyss</Link>
+      
       <Link className="button" onClick={toggleDropdown}>
-        Shop
+        <i class="fa-solid fa-bars"></i>
         {drop && <Dropdown />}
       </Link>
     </section>

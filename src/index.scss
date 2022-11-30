@@ -1,4 +1,4 @@
-:root {
+:last-child:root {
   font-size: 62.5%;
   --primary: #0d1117;
   --secondary: #161b22;
@@ -22,7 +22,7 @@
 
 body {
   background-color: var(--primary);
-  color: var(--highlights);
+  color: var(--font);
   font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -40,6 +40,10 @@ h1,h2,h3,h4{
   width: 100%;
 }
 
+h1{
+  font-size: 5rem;
+}
+
 h2{
   margin: var(--largeSpacer) 0 var(--smallSpacer);
   padding: var(--mediumSpacer) 0 var(--smallSpacer);
@@ -49,9 +53,9 @@ h2{
   max-width: 40%;
 }
 
-.button {
-  background-color: var(--button03);
-  color: #fff;
+.button, button {
+  background-color: var(--button02);
+  color: var(--font);
   width: 13.5rem;
   padding: var(--mediumSpacer) var(--largeSpacer);
   margin: 0 1rem;
@@ -59,11 +63,11 @@ h2{
   border-radius: 0.8rem;
 }
 
-button:hover{
-  background-color: #ccccccee;
+button:hover, button:hover{
+  background-color: var(--button03);
   color: var(--secondary);
   font-weight: 600;
-  border: solid 3px var(--button03);
+  border: solid 3px var(--button02);
 }
 
 a{
@@ -84,6 +88,7 @@ a:hover{
   width: 100%;
   display: flex;
   justify-content:space-between;
+  align-items: center;
   padding: 0 var(--mediumSpacer) ;
 
   .logoContainer{
@@ -128,6 +133,10 @@ a:hover{
   top: 0;
   z-index: 2;
 
+  i{
+    font-size: 2.1rem;
+  }
+
   .dropdownMenu{
     background-color: var(--secondary);
     width: 16rem;
@@ -135,8 +144,10 @@ a:hover{
     flex-wrap: wrap;
     position: absolute;
     top: 7.5rem;
-    right: 0.5rem;
+    right: 2rem;
     padding: 1rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
     box-shadow:
     var(--highlights) 1px 1px 1px,
     var(--highlights) -1px -1px 1px,
@@ -174,75 +185,138 @@ a:hover{
 // news Settings
 .basicNewsCard {
   background-color: var(--secondary);
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   margin: 1.5rem auto;
-  padding: 1rem;
+  padding: var(--largeSpacer);
 
-  h2 {
-    width: 80%;
-    text-align: start;
-    border: solid;
-  }
-
-  .date {
-    width: 20%;
-    text-align: end;
-    border: solid;
-  }
-
-  .newsContent {
-    margin: 0.5rem 0;
-    border: solid;
-  }
-
-  .newsFooter {
+  .newsHeadLine{
     width: 100%;
-    text-align: end;
+    display: flex;
+    border-bottom: solid 1px #ccc;
+
+    h2 {
+      width: 80%;
+      text-align: start;
+      padding: 0 var(--mediumSpacer);
+    }
+  
+    .date {
+      width: 20%;
+      text-align: end;
+    }
+  }
+
+  .newsDescription {
+    width: 100%;
+    padding: var(--mediumSpacer);
+    margin: var(--mediumSpacer) 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .newsDetails {
+    width: 60%;
+    text-align: center;
+    padding: var(--mediumSpacer);
+    margin: var(--mediumSpacer) auto;
+    border: solid 2px red;
+  }
+
+  .paragraphs{
+    width: 100%;
+
+    .paraTitle{
+      padding: var(--largeSpacer) 0 var(--smallSpacer) 0;
+      margin: var(--largeSpacer) 0 var(--smallSpacer) 0;
+    }
+
+    .paraContent{
+      margin: var(--mediumSpacer) 0;
+    }
+  }
+}
+
+.modal{
+  .part{
+    padding: var(--smallSpacer);
+    margin: var(--smallSpacer) 0;
   }
 }
 
 // shop settings
-.basicShopCard {
-  background-color: var(--secondary);
-  width: 80%;
+.shopContainer{
+  width: 85%;
   display: flex;
   flex-wrap: wrap;
-  margin: 1.5rem auto;
-  padding: 2rem 3rem;
-  
-  h2 {
-    margin: 1rem 0;
-    text-align: start;
-    border: solid;
-  }
+  padding: var(--mediumSpacer);
+  margin: auto;
 
-  .image{
-    width: 20%;
-    margin: 2rem 0;
-    border: solid;
+  // shop filter
+.shopFilter{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0.5rem;
 
-    img{
-      width: 100%;
-      border: solid;
+
+  select{
+    background-color: transparent;
+    color: var(--font);
+    width: 15rem;
+    padding: var(--smallSpacer) var(--mediumSpacer);
+    margin: var(--smallSpacer);
+    border-radius: var(--smallSpacer);
+
+    option{
+      background-color: #ccc;
+      color: var(--primary)
     }
   }
+}
 
-  .shopContent {
-    width: 75%;
-    margin: 1rem 2rem;
-    border: solid;
-  }
-
-  .shopFooter {
-    width: 100%;
-    text-align: center;
+// shop cards
+  .basicShopCard {
+    background-color: var(--secondary);
+    width: 32%;
+    max-width: 45rem;
     display: flex;
-    justify-content: end;
-
-    .button{
-      width: 14rem;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    padding: var(--xlargeSpacer) var(--mediumSpacer);
+    
+    h2 {
+      margin: var(--smallSpacer) var(--mediumSpacer) 0;
+      text-align: start;
+      border: solid;
+    }
+  
+    .image{
+      width: 90%;
+      margin:  var(--smallSpacer) auto;
+      border: solid;
+  
+      img{
+        width: 100%;
+        border: solid;
+      }
+    }
+  
+    .shopContent {
+      width: 100%;
+      margin:  var(--smallSpacer) 0;
+      border: solid;
+    }
+  
+    .shopFooter {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: end;
+  
+      .button{
+        width: 14rem;
+      }
     }
   }
 }
@@ -282,17 +356,52 @@ a:hover{
         padding: var(--mediumSpacer)
       }
 
-      .day, .video, .freeContainer{
+      .day, .video, .videoWe, .freeContainer{
         width: 40%;
-        
       }
 
       .freeContainer{
         margin: auto;
       }
 
-      video{
+      .video{
+        video{
+          height: 19rem;
+          border-radius: 50%;
+        }
+      }
+
+      .social{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 4rem;
+
+        i{
+          width: 100%;
+        }
+      }
+
+      .videoWe{
+        width: 337.77px;
         height: 19rem;
+        display: flex;
+        margin: auto;
+        border-radius: 50%;
+        overflow: hidden;
+
+        div{
+          width: 50%;
+          overflow: hidden;
+
+          video{
+            translate: -25%;
+            border-radius: 0%;
+          }
+        }
       }
     }
 
@@ -313,8 +422,8 @@ a:hover{
 .createForm{
   background-color: var(--secondary);
   width: 80%;
-  height: 60rem;
-  margin: auto;
+  min-height: 60rem;
+  margin: var(--largeSpacer) auto;
   padding: var(--mediumSpacer);
   display: flex;
   flex-wrap: wrap;
@@ -329,16 +438,33 @@ a:hover{
 
   input{
     width: 70%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: var(--smallSpacer) var(--mediumSpacer);
     padding: var(--smallSpacer);
     border-radius: var(--smallSpacer);
   }
 
+  div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    label{
+      min-width: 20rem;
+      border: red solid 2px;
+    }
+  
+    input{
+      width: 80%;
+      padding: var(--smallSpacer) var(--mediumSpacer); 
+    }
+  }
+  
+
   .counter{
     position: relative;
-    top: -2.5rem;
-    left: 92%;
+    top: -2rem;
+    left: 90%;
   }
 
   .content{
@@ -348,11 +474,22 @@ a:hover{
   textarea{
     width: 100%;
     max-width: 100%;
-    height: 62%;
-    max-height: 67%;
+    height: 30rem;
+    max-height: 30rem;
     line-height: 1.7rem;
     margin: var(--mediumSpacer) auto;
     padding: var(--smallSpacer);
+  }
+
+  .textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 10rem;
+    max-height: 30rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin: var(--mediumSpacer) auto;
+    padding: var(--smallSpacer) var(--mediumSpacer);
   }
 
   button{
@@ -367,7 +504,7 @@ a:hover{
 .articleMenu{
   width: 80%;
   display: flex;
-  margin: auto;
+  margin: 1rem auto -1rem auto;
   padding: var(--mediumSpacer);
 
   button{
@@ -382,7 +519,7 @@ a:hover{
 
 .newSpan{
   background-color: var(--secondary);
-  color: #999;
+  color: lightgreen;
   width: 80%;
   margin: var(--mediumSpacer);
   padding: var(--mediumSpacer);
@@ -391,7 +528,6 @@ a:hover{
 }
 
 .newSpan:hover{
-  color: var(--font);
   border: var(--font) solid 1px;
 }
 
@@ -410,16 +546,59 @@ a:hover{
   width: 100%;
   height: 13.5rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;justify-content: end;
   margin-top: var(--xlargeSpacer);
   padding: var(--xlargeSpacer);
 
   .aboutContainer{
-    width: 33%;
+    width: 30%;
   }
 
   .linkContainer{
-    width: 33%;
+    min-width: 40%;
+    font-size: 4rem;
+    padding: var(--mediumSpacer);
+
+    i{
+      width: 8rem;
+      height: 100%;
+      border: none;
+      padding: var(--mediumSpacer);
+    }
+
+    a:hover{
+      background-color: transparent;
+    }
+
+    .fa-discord{
+      color: var(--font);
+    }
+    .fa-discord:hover{
+      background-color: blue;
+      color: var(--secondary);
+    }
+    .fa-twitch{
+      color: rgba(172, 46, 210, 0.872);
+    }
+    .fa-youtube{
+      color: rgb(198, 6, 6);
+    }
+    .fa-twitch:hover, .fa-youtube:hover{
+      background-color: var(--font);
+    }
+    .fa-tiktok{
+      color: var(--primary);
+    }
+    .fa-tiktok:hover{
+      background-color: var(--primary);
+      color: var(--font);
+    }
+    .fa-patreon{
+      color: rgba(255, 77, 0, 0.867);
+    }
+    .fa-patreon:hover{
+      color: rgb(254, 100, 34);
+    }
   }
   
     ul li{
@@ -462,6 +641,30 @@ a:hover{
     }
   }
 }
+
+// Dashboard
+.dashboardContainer{
+  min-height: 80vh;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+
+  .dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    .dashboardMenu{
+      width: 25rem;
+      height: 16rem;
+      margin: var(--mediumSpacer);
+      padding: var(--largeSpacer) var(--smallSpacer);
+      border: solid 1px;
+    }
+  }
+}
+
+
 
 // Mediaquerry
 @media only screen and (max-width: 1200px) {
