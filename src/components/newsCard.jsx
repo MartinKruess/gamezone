@@ -50,7 +50,19 @@ export const NewsCard = () => {
           paragraph.paraContext && <div className="paragraphs" key={`part_${p}`}>
             <h3 className="paraTitle" >{paragraph.paraTitle}</h3>
             {paragraph.paraTitle ? <hr />: <></>}
-            <p className="paraContent">{paragraph.paraContext.replace(/\\n/g, '\n')}</p>
+            <div className="contentContainer">
+                <span className="paraContent" style={{width: '69%'}}>
+                  {paragraph.imgPos != "center" &&
+                  <span className={paragraph.imgPos}>
+                    <img src={paragraph.paraImg} alt="" />
+                  </span>}
+                  {paragraph.paraContext.replace(/\\n/g, '\n')}
+                  {paragraph.imgPos === "center" &&
+                  <div className={paragraph.imgPos} style={{width: '100%'}}>
+                    <img src={paragraph.paraImg} style={{width: '30%'}} alt="" />
+                  </div>}
+                </span>
+            </div>
           </div>
         ))}
       </div>

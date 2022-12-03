@@ -12,6 +12,7 @@ export const CreatePreview = () => {
   const [title, setTitle] = useState(newArticle.title || "");
   const [description, setDescription] = useState( newArticle.description || "");
 
+
   const handleTextarea = (e) => {
     setCount(e.target.value.length)
     setDescription(e.target.value)
@@ -42,7 +43,6 @@ export const CreatePreview = () => {
         value={description && description}
       ></textarea>
       <p className="counter">{count}/2000</p>
-      <input type="file" />
     </form>
   );
 };

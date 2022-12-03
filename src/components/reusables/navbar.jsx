@@ -13,7 +13,7 @@ export const Navbar = () => {
     <section className="navbarContainer">
       
       <Link className="button" onClick={toggleDropdown}>
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
         {drop && <Dropdown />}
       </Link>
     </section>

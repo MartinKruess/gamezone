@@ -44,26 +44,37 @@ export const CelestAbyssNewArticle = ({children}) => {
     title: articleFromLS ? articleFromLS.title : "",
     date: articleFromLS ? articleFromLS.date : "",
     description: articleFromLS ? articleFromLS.description : "",
+    img: "",
     paragraphs: [
       {
         paraTitle: "",
-        paraContext: ""
+        paraContext: "",
+        paraImg: "",
+        imgPos: "",
       },
       {
         paraTitle: "",
-        paraContext: ""
+        paraContext: "",
+        paraImg: "",
+        imgPos: "",
       },
       {
         paraTitle: "",
-        paraContext: ""
+        paraContext: "",
+        paraImg: "",
+        imgPos: "",
       },
       {
         paraTitle: "",
-        paraContext: ""
+        paraContext: "",
+        paraImg: "",
+        imgPos: "",
       },
       {
         paraTitle: "",
-        paraContext: ""
+        paraContext: "",
+        paraImg: "",
+        imgPos: "",
       },
     ]
   });

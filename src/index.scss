@@ -231,8 +231,68 @@ a:hover{
       margin: var(--largeSpacer) 0 var(--smallSpacer) 0;
     }
 
-    .paraContent{
-      margin: var(--mediumSpacer) 0;
+    .contentContainer{
+      display: flex;
+      flex-wrap: wrap;
+      margin: var(--mediumSpacer) auto;
+
+      .paraContent{
+        min-width: 100%;
+        margin: auto;
+        padding: var(--mediumSpacer);
+
+        img{
+          max-width: 100%;
+        }
+  
+        .left{
+          width: 50%;
+          float: left;
+          padding: var(--smallSpacer) var(--mediumSpacer);
+        }
+  
+        .right{
+          width: 50%;
+          float: right;
+          padding: var(--smallSpacer) var(--mediumSpacer);
+        }
+  
+        // no function -.-
+        // .center{
+        //   width: 20%;
+        //   border: solid;
+        // }
+  
+        .banner{
+          width: 100%;
+          float: none;
+        }
+
+        .icon{
+          width: 20%;
+          float: right;
+          padding: var(--smallSpacer) var(--mediumSpacer);
+        }
+      }
+
+      
+
+
+      // .left, .right{
+      //   width: 30%;
+      // }
+      // .center{
+      //   width:100%;
+      //   img{
+      //     width: 30%;
+      //   }
+      // }
+      // .banner{
+      //   width: 100%;
+      // }
+      // .icon{
+      //   width: 10%;
+      // }
     }
   }
 }
