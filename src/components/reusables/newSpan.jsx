@@ -83,4 +83,20 @@ export const CreateArticle = ({ i }) => {
         {previewSource && (<img src={previewSource} alt="chosen" style={{width: '10rem'}} />)}
     </form>
   );
+/*
+    abschnitt objekt struktur
+    articles: [
+        {
+            name: "",
+            text: "",
+            abschnitte: [
+                {
+                    abschnittName: "",
+
+                }
+            ]
+        }
+    ]
+*/
+
 };

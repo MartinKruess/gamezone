@@ -38,11 +38,12 @@ export const CreatePreview = () => {
         id=""
         cols="30"
         rows="10"
-        maxLength={2000}
-        onChange={(e) => handleTextarea(e)}
-        value={description && description}
+        maxLength={3000}
+        onChange={(e) => setCount(e.target.value.length)}
       ></textarea>
-      <p className="counter">{count}/2000</p>
+      <p className="counter">{count}/3000</p>
+      <input type="file" />
+      <button type="submit">Create</button>
     </form>
   );
 };
