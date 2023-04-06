@@ -9,11 +9,11 @@ return (
             </ul>
         </article>
         <article className="linkContainer">
-            <ul>
-                <li>Link1</li>
-                <li>Link2</li>
-                <li>Link3</li>
-            </ul>
+            <a href=""><i className="fa-brands fa-discord"></i></a>
+            <a href=""><i className="fa-brands fa-twitch"></i></a>
+            <a href=""><i className="fa-brands fa-youtube"></i></a>
+            <a href=""><i className="fa-brands fa-tiktok"></i></a>
+            <a href=""><i className="fa-brands fa-patreon"></i></a>
         </article>
         
     </section>
