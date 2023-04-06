@@ -1,24 +1,39 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { backendURL } from "../../App";
 import { CreatePreview } from "../../components/reusables/createPreview";
 import { CreateArticle } from "../../components/reusables/newSpan";
+import { CelestArticleContext } from "../../global/useContext";
+import { getFromLocalStorage, saveInLocalStorage } from "../../reusables/localstorage";
 
 export const CreateArticleCA = () => {
+  const {newArticle, setNewArticle} = useContext(CelestArticleContext)
   const [preview, setPreview] = useState(true);
-  const [spans, setSpans] = useState(["span"]);
-  const [article, setArticle] = useState({
-    name: "",
-    date: "",
-    spans: [],
-  });
+  const [spans, setSpans] = useState([1]);
 
   useEffect(() => {
-    console.log(spans);
-  }, [spans]);
-
-  useEffect(() => {
-    console.log(preview);
+      saveInLocalStorage('newArticle', newArticle)
+      getFromLocalStorage('newArticle', newArticle)
   }, [preview]);
 
+  const clickHandler = () => {
+    setSpans([...spans, spans+1])
+  }
+
+  const handleCreateArticle = async (caData) => {
+    console.log("caData", caData)
+
+    const res = await fetch(`${backendURL}/management/ca`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(caData),
+    })
+    const newArticles = await res.json()
+    console.log(newArticles)
+  }
+  
   return (
     <article>
       <h1>Lege einen neuen Blog-Artikel an!</h1>
@@ -38,14 +53,14 @@ export const CreateArticleCA = () => {
           {spans.length < 5 && (
             <button
               className="newSpan"
-              onClick={() => setSpans([...spans, "span"])}
+              onClick={() => clickHandler() }
             >
               + add span
             </button>
           )}
         </div>
       )}
-      <button className="createArticle" type="submit">
+      <button className="createArticle" type="submit" onClick={() => handleCreateArticle(newArticle)}>
         Artikel erstellen
       </button>
     </article>

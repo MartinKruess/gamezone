@@ -10,13 +10,17 @@ import { Streamplan } from "./pages/streamplan";
 import { Technikshop } from "./pages/technikshop";
 import { Shop } from "./pages/shop";
 import { Footer } from "./components/reusables/footer";
-import { CaArticle } from "./pages/ca-article";
 
-export const backendURL = "http://localhost:4000";
+// MANAGEMENT PAGES
+import { Login } from "./pages/loginpage";
+import { Dashboard } from "./pages/management/dashboard";
+import { CaArticle } from "./pages/caArticle";
+import { CreateMerchArticle } from "./pages/management/createMerchArticle";
+
+
+export const backendURL = "http://localhost:5500";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <main className="App">
       <Header />
@@ -30,20 +34,11 @@ function App() {
         <Route exact path="/shop/technik" element={<Technikshop />} />
         <Route exact path="/shop/extras" element={<Shop />} />
 
-        <Route exact path="/managment/ca_article" element={<CaArticle />} />
-
-        {/* Footer & more */}
-        {/* <Route exact path="/partners" element={<Partner />} />
-        <Route exact path="/" element={<Contact />} />
-        <Route exact path="/" element={<Impressum />} />
-        <Route exact path="/" element={<Datenschutz />} /> */}
-
-        {/* Specials */}
-        
-        {/* <Route exact path="/" element={<Special02 />} /> */}
-
-        {/* TESTSEITE */}
-        {/* <Route exact path="/test" element={<Testpage />} />  */}
+        {/* MANAGEMENT PAGES */}
+        <Route exact path="/management/login" element={<Login />} /> 
+        <Route exact path="/management/dashboard" element={<Dashboard />} />
+        <Route exact path="/management/celestabyss" element={<CaArticle />} />
+        <Route exact path="/management/merch" element={<CreateMerchArticle />} />
       </Routes>
       <Footer />
     </main>
