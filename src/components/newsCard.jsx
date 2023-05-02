@@ -4,6 +4,10 @@ import { backendURL } from "../App"
 import { loadData } from "../global/loadData"
 
 export const NewsCard = () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ce2a14799eff929e53c6654d4685ca06d10fb99
   const [allArticles, setAllArticles] = useState([])
   const [data, setData] = useState([])
   const [toggle, setToggle] = useState(false)
@@ -43,7 +47,11 @@ export const NewsCard = () => {
           <h2 className="date">{article.date}</h2>
         </div>
         
+<<<<<<< HEAD
         {!toggle && <p className="newsDescription">{article.description}</p>}
+=======
+        <p className="newsDescription">{article.description}</p>
+>>>>>>> 9ce2a14799eff929e53c6654d4685ca06d10fb99
         <button className="newsDetails" onClick={() => handleToggle(i)} >zum Artikel</button>
         {toggle && i === index && article.paragraphs.map((paragraph, p) => (
           paragraph.paraContext && <div className="paragraphs" key={`part_${p}`}>
@@ -55,8 +63,12 @@ export const NewsCard = () => {
                   <span className={paragraph.imgPos}>
                     <img src={paragraph.paraImg} alt="" />
                   </span>}
+<<<<<<< HEAD
                   {/* {paragraph.paraContext.replace(/\\n/g, '\n')} */}
                   {paragraph.paraContext.split("\\n").map((paragraphPart, pp) => <div style={{paddingBottom: '1rem'}} key={`pp_${pp}`}> {paragraphPart}</div> )}
+=======
+                  {paragraph.paraContext.replace(/\\n/g, '\n')}
+>>>>>>> 9ce2a14799eff929e53c6654d4685ca06d10fb99
                   {paragraph.imgPos === "center" &&
                   <div className={paragraph.imgPos} style={{width: '100%'}}>
                     <img src={paragraph.paraImg} style={{width: '30%'}} alt="" />
