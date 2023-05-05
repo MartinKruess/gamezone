@@ -89,8 +89,4 @@ export const CelestAbyssNewArticle = ({children}) => {
         {children}
       </CelestArticleContext.Provider>
     )
-<<<<<<< HEAD
 } 
-=======
-}
->>>>>>> 9ce2a14799eff929e53c6654d4685ca06d10fb99

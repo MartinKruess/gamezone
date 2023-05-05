@@ -184,7 +184,7 @@ a:hover{
 
 // Landingpage
 .landingpage{
-  height: 100vh;
+  //height: 100vh;
 
   .aboutContainer{
     width: 80%;
@@ -193,15 +193,15 @@ a:hover{
     margin: auto;
 
     .imgContainer{
-      width: 80%;
+      width: 100%;
       margin: auto;
       overflow: hidden;
-      border:solid;
 
       .carousel{
         width: 100%;
         display: flex;
         justify-content: space-around;
+        margin: 2rem 0;
         transition: cubic-bezier(5);
 
         i{
@@ -209,12 +209,14 @@ a:hover{
           font-size: 4rem;
           text-align:center;
           align-self: center;
-          padding: 1.5rem 1rem;
+          padding: 5.5rem 1rem;
           cursor: pointer;
           border: none;
+          border-radius: 2rem;
         }
 
         i:hover{
+          background-color: var(--secondary);
           color: red;
         }
 
@@ -230,31 +232,58 @@ a:hover{
         }
 
         .shopPreviewContainer{
+          background-color: var(--secondary);
           width: 40rem;
           height: 60rem;
-          border: solid;
+          position: relative;
+          border: solid red 0.2rem;
+          box-shadow: 
+          0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+          -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
+          -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+          0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
 
           h3{
-            height: 12rem;
-            font-size: 2.2rem;
-            padding: 1rem;
-            
-            border: solid;
+            height: 8rem;
+            font-size: 2rem;
+            padding: 0.5rem;
           }
 
           .shopPreviewCard{
             width: 90%;
-            height: auto;
-            margin: auto;
-            border:solid #ccc 0.1rem;
+            margin: 0.8rem auto;
 
             img{
-              width: 90%;
+              width: 100%;
             }
           }
 
-          .price{
-            font-size: 2.5rem;
+          .cardFooter{
+            width: 100%;
+            height: 4rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            bottom: 1rem;
+
+            .price{
+              font-size: 2.2rem;
+            }
+  
+            a{
+              background-color: var(--button02);
+              width: 30%;
+              height: 3.5rem;
+              font-size: 1.6rem;
+              padding: 0.5rem 1rem;
+            }
+
+            a:hover{
+              background-color: var(--button01);
+              color: var(--font);
+              font-weight: 600;
+            }
           }
         }
       }

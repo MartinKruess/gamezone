@@ -1,5 +1,3 @@
-import { Freeday } from "../components/reusables/freeday";
-
 export const Streamplan = () => {
   return (
     <section className="streamplanContainer">
