@@ -10,12 +10,12 @@ export const Navbar = () => {
   };
 
   return (
-    <section className="navbarContainer">
+    <nav className="navbarContainer">
       
       <Link className="button" onClick={toggleDropdown}>
         <i className="fa-solid fa-bars"></i>
         {drop && <Dropdown />}
       </Link>
-    </section>
+    </nav>
   );
 };

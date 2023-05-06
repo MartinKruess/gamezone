@@ -36,6 +36,16 @@ code {
 }
 
 // Global settings
+
+section{
+  width: 80%;
+  margin: auto;
+}
+
+article{
+  padding: 3rem 0;
+}
+
 h1,h2,h3,h4{
   width: 100%;
 }
@@ -185,12 +195,16 @@ a:hover{
 // Landingpage
 .landingpage{
   //height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
 
   .aboutContainer{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    border: solid;
 
     .imgContainer{
       width: 100%;
@@ -233,7 +247,7 @@ a:hover{
 
         .shopPreviewContainer{
           background-color: var(--secondary);
-          width: 40rem;
+          width: 38rem;
           height: 60rem;
           position: relative;
           border: solid red 0.2rem;
@@ -244,13 +258,14 @@ a:hover{
           0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
 
           h3{
-            height: 8rem;
+            height: 6rem;
             font-size: 2rem;
             padding: 0.5rem;
           }
 
           .shopPreviewCard{
-            width: 90%;
+            width: 80%;
+            height: auto;
             margin: 0.8rem auto;
 
             img{
@@ -258,22 +273,37 @@ a:hover{
             }
           }
 
+          .description{
+            width: 80%;
+            height: 15rem;
+            font-size: 1.4rem;
+            text-align: start;
+            margin: auto;
+
+            p{
+              margin: 0.5rem;
+            }
+          }
+
           .cardFooter{
-            width: 100%;
+            width: 85%;
             height: 4rem;
             display: flex;
             justify-content: space-around;
             align-items: center;
             position: absolute;
+            left: 7.5%;
             bottom: 1rem;
 
             .price{
+              width: 30%;
+              height: 3.5rem;
               font-size: 2.2rem;
             }
   
             a{
               background-color: var(--button02);
-              width: 30%;
+              width: 40%;
               height: 3.5rem;
               font-size: 1.6rem;
               padding: 0.5rem 1rem;
@@ -286,6 +316,30 @@ a:hover{
             }
           }
         }
+      }
+    }
+  }
+
+  .newArticle{
+    display: flex;
+    justify-content: center;
+    border: solid;
+
+    .article{
+      width: 40%;
+      margin: auto;
+      padding: 1rem 3rem;
+      border: solid 1px;
+      box-shadow: inset 1px 1px 1px #000,
+      inset 1px 1px 1px #242629;
+
+      h2{
+        text-align: start;
+        border-bottom:solid;
+      }
+
+      p{
+        text-align: justify;
       }
     }
   }
@@ -384,9 +438,6 @@ a:hover{
         }
       }
 
-      
-
-
       // .left, .right{
       //   width: 30%;
       // }
@@ -415,76 +466,109 @@ a:hover{
 
 // shop settings
 .shopContainer{
-  width: 85%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   padding: var(--mediumSpacer);
   margin: auto;
 
   // shop filter
-.shopFilter{
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  margin-bottom: 0.5rem;
-
-
-  select{
-    background-color: transparent;
-    color: var(--font);
-    width: 15rem;
-    padding: var(--smallSpacer) var(--mediumSpacer);
-    margin: var(--smallSpacer);
-    border-radius: var(--smallSpacer);
-
-    option{
-      background-color: #ccc;
-      color: var(--primary)
-    }
-  }
-}
-
-// shop cards
-  .basicShopCard {
-    background-color: var(--secondary);
-    width: 32%;
-    max-width: 45rem;
+  .shopFilter{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-    padding: var(--xlargeSpacer) var(--mediumSpacer);
-    
-    h2 {
-      margin: var(--smallSpacer) var(--mediumSpacer) 0;
-      text-align: start;
-      border: solid;
-    }
-  
-    .image{
-      width: 90%;
-      margin:  var(--smallSpacer) auto;
-      border: solid;
-  
-      img{
-        width: 100%;
-        border: solid;
+    justify-content: end;
+    margin-bottom: 0.5rem;
+
+    select{
+      background-color: transparent;
+      color: var(--font);
+      width: 15rem;
+      padding: var(--smallSpacer) var(--mediumSpacer);
+      margin: var(--smallSpacer);
+      border-radius: var(--smallSpacer);
+
+      option{
+        background-color: #ccc;
+        color: var(--primary)
       }
     }
-  
-    .shopContent {
-      width: 100%;
-      margin:  var(--smallSpacer) 0;
-      border: solid;
-    }
-  
-    .shopFooter {
-      width: 100%;
-      text-align: center;
-      display: flex;
-      justify-content: end;
-  
-      .button{
-        width: 14rem;
+  }
+
+  article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .shopPreviewContainer{
+      background-color: var(--secondary);
+      width: 38rem;
+      height: 60rem;
+      position: relative;
+      margin: 3rem 0;
+      border: solid red 0.2rem;
+      box-shadow: 
+      0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+      -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
+      -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+      0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
+
+      h3{
+        height: 6rem;
+        font-size: 2rem;
+        padding: 0.5rem;
+      }
+
+      .shopPreviewCard{
+        width: 80%;
+        height: auto;
+        margin: 0.8rem auto;
+
+        img{
+          width: 100%;
+        }
+      }
+
+      .description{
+        width: 80%;
+        height: 15rem;
+        font-size: 1.4rem;
+        text-align: start;
+        margin: auto;
+
+        p{
+          margin: 0.5rem;
+        }
+      }
+
+      .cardFooter{
+        width: 85%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        left: 7.5%;
+        bottom: 1rem;
+
+        .price{
+          width: 30%;
+          height: 3.5rem;
+          font-size: 2.2rem;
+        }
+
+        a{
+          background-color: var(--button02);
+          width: 40%;
+          height: 3.5rem;
+          font-size: 1.6rem;
+          padding: 0.5rem 1rem;
+        }
+
+        a:hover{
+          background-color: var(--button01);
+          color: var(--font);
+          font-weight: 600;
+        }
       }
     }
   }

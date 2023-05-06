@@ -1,10 +1,10 @@
 import { ShopContainer } from "./shopContainer"
 
-export const MyShop = () => {
+export const NewArticles = () => {
     return(
-        <div className="aboutContainer">
-            <h2>Meine Games</h2>
+        <article className="aboutContainer">
+            <h2>Beliebteste Gamezone Artikel</h2>
             <ShopContainer />
-        </div>
+        </article>
     )
 }

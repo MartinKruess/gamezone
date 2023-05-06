@@ -1,12 +1,13 @@
-import { NewsCard } from "../components/newsCard";
 import { MyGames } from "./landingparts/mygames";
-import { MyShop } from "./landingparts/myshop";
+import { NewArticles } from "./landingparts/myshop";
+import { NewBlog } from "./landingparts/newBlog";
 
 export const Landingpage = () => {
   return (
     <section className="landingpage">
       <MyGames />
-      <MyShop />
+      <NewArticles />
+      <NewBlog />
     </section>
   );
 };

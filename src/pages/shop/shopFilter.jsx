@@ -1,18 +1,11 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { ShopContext } from "../../global/useContext"
-import { merches } from "../merch"
 
 export const ShopFilter = () => {
     const {type, setType, filter,  setFilter} = useContext(ShopContext)
 
     const getTypeTarget = (e) => {
         setType(e.target.value)
-        filterMerchesByType(type)
-    }
-
-    const filterMerchesByType = (type) => {
-       const filteredArticles = merches.filter((merch => merch.type === type))
-       console.log("filteredArticles", filteredArticles)
     }
 
     const getFilterTarget = (e) => {
@@ -23,13 +16,17 @@ return(
     <form action="" className="shopFilter">
         <select name="typeTarget" id=""
         onChange={(e) => getTypeTarget(e)}>
+            <option value="default">Alle</option>
             <option  value="T-Shirt">T-Shirt</option>
             <option value="V-Shirt">V-Shirt</option>
-            <option value="">Hoodie</option>
-            <option value="">Kaputzen-Hoodie</option>
+            <option value="Langarmshirt">V-Shirt</option>
+            <option value="Sweater">V-Shirt</option>
+            <option value="Hoodie">Hoodie</option>
+            <option value="Kaputzen-Hoodie">Kaputzen-Hoodie</option>
         </select>
         <select name="filterTarget" id=""
         onChange={(e) => getFilterTarget(e)}>
+            <option value="">unsortiert</option>
             <option value="low">Preis up</option>
             <option value="high">Preis down</option>
             <option value="new">Neuheiten</option>
