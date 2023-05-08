@@ -19,19 +19,18 @@ return(
             <option value="default">Alle</option>
             <option  value="T-Shirt">T-Shirt</option>
             <option value="V-Shirt">V-Shirt</option>
-            <option value="Langarmshirt">V-Shirt</option>
-            <option value="Sweater">V-Shirt</option>
+            <option value="Langarmshirt">Langarmshirt</option>
+            <option value="Sweater">Sweater</option>
             <option value="Hoodie">Hoodie</option>
             <option value="Kaputzen-Hoodie">Kaputzen-Hoodie</option>
         </select>
         <select name="filterTarget" id=""
         onChange={(e) => getFilterTarget(e)}>
-            <option value="">unsortiert</option>
+            <option value="default">unsortiert</option>
             <option value="low">Preis up</option>
             <option value="high">Preis down</option>
             <option value="new">Neuheiten</option>
-            <option value="top">Topseller</option>
+            <option value="sells">Topseller</option>
         </select>
     </form>
-)
-}
+)}

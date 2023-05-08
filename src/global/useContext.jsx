@@ -25,8 +25,8 @@ export const UserProvider = ({ children }) => {
 }
 
 export const GlobalShopFilter = ({children}) => {
-    const [type, setType] = useState(null)
-    const [filter, setFilter] = useState(null)
+    const [type, setType] = useState("default")
+    const [filter, setFilter] = useState("default")
 
     useEffect(() => {
         console.log("type", type, "filter", filter)
@@ -81,7 +81,7 @@ export const CelestAbyssNewArticle = ({children}) => {
 
   useEffect(() => {
       newArticle ? saveInLocalStorage('newArticle', newArticle) : deleteInLocalStorage('newArticle')
-      console.log("newArticle", newArticle)
+      // console.log("newArticle", newArticle)
   }, [newArticle])
 
   return (

@@ -1,6 +1,10 @@
+import { Termine } from "./termine";
+
 export const Streamplan = () => {
   return (
     <section className="streamplanContainer">
+      <Termine />
+
       <h2>Streamplan - Raikun</h2>
       <article className="planContainer">
         <div className="planCard">

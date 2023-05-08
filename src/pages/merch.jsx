@@ -3,13 +3,13 @@ import { ShopCard } from "./shop/shoppingCard";
 
 export const merches = [
   {
-    title: "Gamezone - Level 30 completed 4gamers T-Shirt mit V-Ausschnitt Top",
+    title: "1",
     collection: "Gamer4Ever",
     brand: "Gamezone",
     creator: "Raikun",
     type: "V-Shirt",
     gender: "female",
-    price: 17.99, 
+    price: 19.99, 
     img: "../../public/images/logo.svg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
@@ -17,7 +17,7 @@ export const merches = [
     sells: 15,
   },
   {
-    title: "CDE",
+    title: "2",
     collection: "Gamer4Ever Zero",
     brand: "Gamezone",
     creator: "Raikun",
@@ -31,7 +31,7 @@ export const merches = [
     sells: 0,
   },
   {
-    title: "CDE Second",
+    title: "3",
     collection: "Gamer4Ever",
     brand: "Gamezone",
     creator: "Raikun",
@@ -45,11 +45,11 @@ export const merches = [
     sells: 12,
   },
   {
-    title: "CDE",
+    title: "4",
     collection: "Gamer4Ever",
     brand: "Gamezone",
     creator: "Raikun",
-    type: "V-Shirt",
+    type: "Langarmshirt",
     gender: "female",
     price: 17.99, 
     img: "../../public/images/logo.svg",
@@ -59,11 +59,11 @@ export const merches = [
     sells: 2,
   },
   {
-    title: "CDE",
+    title: "5",
     collection: "Gamer4Ever",
     brand: "Gamezone",
     creator: "Raikun",
-    type: "V-Shirt",
+    type: "Hoodie",
     gender: "female",
     price: 17.99, 
     img: "../../public/images/logo.svg",
@@ -71,6 +71,20 @@ export const merches = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "htttps://www.cde.de",
     sells: 5,
+  },
+  {
+    title: "6",
+    collection: "Gamer4Ever",
+    brand: "Gamezone",
+    creator: "Raikun",
+    type: "Hoodie",
+    gender: "female",
+    price: 37.99, 
+    img: "../../public/images/logo.svg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
+    url: "htttps://www.cde.de",
+    sells: 12,
   },
 ];
 
