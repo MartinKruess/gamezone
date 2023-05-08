@@ -27,8 +27,8 @@ return(
         <select name="filterTarget" id=""
         onChange={(e) => getFilterTarget(e)}>
             <option value="default">unsortiert</option>
-            <option value="low">Preis up</option>
-            <option value="high">Preis down</option>
+            <option value="ascending">Preis up</option>
+            <option value="descending">Preis down</option>
             <option value="new">Neuheiten</option>
             <option value="sells">Topseller</option>
         </select>
