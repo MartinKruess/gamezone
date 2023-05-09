@@ -17,7 +17,7 @@ return(
         <select name="typeTarget" id=""
         onChange={(e) => getTypeTarget(e)}>
             <option value="default">Alle</option>
-            <option  value="T-Shirt">T-Shirt</option>
+            <option value="T-Shirt">T-Shirt</option>
             <option value="V-Shirt">V-Shirt</option>
             <option value="Langarmshirt">Langarmshirt</option>
             <option value="Sweater">Sweater</option>

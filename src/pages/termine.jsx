@@ -3,12 +3,12 @@ export const Termine = () => {
         {
             title: "Gamescom",
             details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nulla molestias amet voluptate iste ab?",
-            date: "25.08.2023",
+            date: "26.08.2023",
         },
         {
             title: "24h Stream",
             details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nulla molestias amet voluptate iste ab?",
-            date: "03.10.2023",
+            date: "02.10.2023",
         },
         {
             title: "Sylvester",
@@ -18,12 +18,14 @@ export const Termine = () => {
     ]
 
     return(
-        <article className="terminContainer" style={{border: "solid"}}>
+        <article className="terminContainer">
             {dateArr.map((date) => (
+                <div className="dateBG">
                 <div className="date">
                     <h3>{date.title}</h3>
                     <p>{date.details}</p>
-                    <p className="date">{date.date}</p>
+                    <p className="dateText">{date.date}</p>
+                </div>
                 </div>
             ))}
         </article>

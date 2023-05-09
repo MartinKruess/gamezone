@@ -1,7 +1,8 @@
+import { backendURL } from "../App";
 import { ShopFilter } from "./shop/shopFilter";
 import { ShopCard } from "./shop/shoppingCard";
 
-export const merches = [
+ export const merches = [
   {
     title: "1",
     collection: "Gamer4Ever",
@@ -87,6 +88,21 @@ export const merches = [
     sells: 12,
   },
 ];
+
+// const res = await fetch(`${backendURL}/merchArticles`, {
+//   method: 'post',
+//   withCredentials: true,
+
+//   headers: {
+//     Accept: 'application/json',
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(mercheArticles),
+// })
+
+// const merches = await res.json()
+// console.log('resData', resData)
+// setToken(merches)
 
 export const Merch = () => {
   return (

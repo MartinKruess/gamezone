@@ -123,7 +123,6 @@ a:hover{
       margin: var(--mediumSpacer) var(--smallSpacer);
       margin-top: var(--mediumSpacer);
       padding: var(--smallSpacer) var(--mediumSpacer);
-      border: solid;
     }
 
     .discord{
@@ -204,7 +203,6 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    border: solid;
 
     .imgContainer{
       width: 100%;
@@ -323,7 +321,6 @@ a:hover{
   .newArticle{
     display: flex;
     justify-content: center;
-    border: solid;
 
     .article{
       width: 40%;
@@ -419,12 +416,6 @@ a:hover{
           float: right;
           padding: var(--smallSpacer) var(--mediumSpacer);
         }
-  
-        // no function -.-
-        // .center{
-        //   width: 20%;
-        //   border: solid;
-        // }
   
         .banner{
           width: 100%;
@@ -576,6 +567,50 @@ a:hover{
 
 
 // Streamplan
+
+.terminContainer{
+  display: flex;
+  margin: 0 auto 15rem;
+
+  .dateBG{
+    background: url("../public/images/particles.gif") 100%/cover no-repeat;
+    width: 30rem;
+    height: 30rem;
+    margin: 1.3rem;
+    border-radius: 9rem;
+  }
+
+  .date{
+    background: linear-gradient(45deg, #111010cc 0%, #18181866 60%, #504f4fcc 120%);
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+    padding: 1.3rem;
+    position: relative;
+    border: solid 1px var(--font);
+    border-radius: 5rem;
+    box-shadow:
+    2px 2px 6px 2px #959595,
+    2px 2px 6px 2px #e20a0a,
+    -2px 2px 6px 2px #959595,
+    2px -2px 6px 2px #e20a0a;
+    
+
+    h3{
+      font-size: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .dateText{
+      color: #ededed66;
+      font-size: 5rem;
+      position: absolute;
+      bottom: 0.5rem;
+      right: 1rem;
+    }
+  }
+}
+
 .streamplanContainer{
   width: 80%;
   display: flex;

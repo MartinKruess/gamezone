@@ -15,31 +15,12 @@ export const ShopCard = () => {
     new: { method: (a, b) => (a.timestamp - b.timestamp) },
     sells: { method: (a, b) => (b.sells - a.sells) },
   };
-
-  // const sortArticles = (arr) => {
-  //   const sorted = arr.sort((a, b) => {
-  //     if(filter === "low"){
-  //       return a.price - b.price
-  //     }else if(filter === "high"){
-  //       return b.price - a.price
-  //     }else if(filter === "new"){
-  //       return a.timestamp - b.timestamp
-  //     }else if(filter === "sells"){
-  //       return a.sells - b.sells
-  //     }else{
-  //       return a - b
-  //     }
-  //     return sorted;
-  //   })
-  // }
   
   useEffect(() => {
     type === "default" ? setMerchArr(merches) : setMerchArr(filteredArticles)
   }, [type])
 
   useEffect(() => {
-    //filter === "default" ? setMerchArr(merches) : setMerchArr(sortArticles())
-    console.log("merchArr", merchArr)
   }, [filter])
 
   useEffect(() => {
