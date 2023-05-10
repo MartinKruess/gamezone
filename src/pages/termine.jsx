@@ -22,7 +22,7 @@ export const Termine = () => {
             {dateArr.map((date) => (
                 <div className="dateBG">
                 <div className="date">
-                    <h3>{date.title}</h3>
+                    <h2>{date.title}</h2>
                     <p>{date.details}</p>
                     <p className="dateText">{date.date}</p>
                 </div>
