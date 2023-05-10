@@ -4,14 +4,14 @@ import { ShopCard } from "./shop/shoppingCard";
 
  export const merches = [
   {
-    title: "1",
+    title: "Kaputzen Hoodie",
     collection: "Gamer4Ever",
     brand: "Gamezone",
     creator: "Raikun",
-    type: "V-Shirt",
+    type: "Kaputzen-Hoodie",
     gender: "female",
-    price: 19.99, 
-    img: "../../public/images/logo.svg",
+    price: 33.99, 
+    img: "/images/shirts/levelCompleted/kaputzenhoodieLv30.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "https://www.amazon.de/gp/product/B09VJQ63JX/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&customId=B0753657ZZ&psc=1",
@@ -25,7 +25,7 @@ import { ShopCard } from "./shop/shoppingCard";
     type: "T-Shirt",
     gender: "female",
     price: 17.99, 
-    img: "../../public/images/mainboard02.jpg",
+    img: "/images/shirts/levelCompleted/Lv18shirt.gif",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "htttps://www.cde.de",
@@ -39,7 +39,7 @@ import { ShopCard } from "./shop/shoppingCard";
     type: "V-Shirt",
     gender: "female",
     price: 17.99, 
-    img: "../../public/images/mainboard01.jpg",
+    img: "/images/shirts/levelCompleted/Lv30Hoodie.gif",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "htttps://www.cde.de",
@@ -53,7 +53,7 @@ import { ShopCard } from "./shop/shoppingCard";
     type: "Langarmshirt",
     gender: "female",
     price: 17.99, 
-    img: "../../public/images/logo.svg",
+    img: "/images/shirts/levelCompleted/Lv30Langarmshirt.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "htttps://www.cde.de",
@@ -67,7 +67,7 @@ import { ShopCard } from "./shop/shoppingCard";
     type: "Hoodie",
     gender: "female",
     price: 17.99, 
-    img: "../../public/images/logo.svg",
+    img: "/images/shirts/levelCompleted/Lv30Shirt.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "htttps://www.cde.de",
@@ -81,7 +81,21 @@ import { ShopCard } from "./shop/shoppingCard";
     type: "Hoodie",
     gender: "female",
     price: 37.99, 
-    img: "../../public/images/logo.svg",
+    img: "/images/shirts/levelCompleted/Lv30shirt.gif",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
+    url: "htttps://www.cde.de",
+    sells: 12,
+  },
+  {
+    title: "6",
+    collection: "Gamer4Ever",
+    brand: "Gamezone",
+    creator: "Raikun",
+    type: "Sweater",
+    gender: "female",
+    price: 37.99, 
+    img: "/images/shirts/levelCompleted/Lv30sweater.gif",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus provident praesentium voluptatem illum fugiat voluptate nihil ex magni quam natus possimus impedit dolorem hic adipisci temporibus dignissimos ratione aliquid esse consectetur, distinctio itaque nisi vero.",
     url: "htttps://www.cde.de",
