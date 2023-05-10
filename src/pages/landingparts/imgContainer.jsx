@@ -9,10 +9,10 @@ export const IMGContainer = () => {
             url: "./images/rl.jpg",
         },
         {
-            url: "./images/realm.png",
+            url: "./images/realm.jpg",
         },
         {
-            url: "./images/TowerOfFantasy.png",
+            url: "./images/TowerOfFantasy.jpg",
         },
         {
             url: "./images/SonsForest.jpg",
