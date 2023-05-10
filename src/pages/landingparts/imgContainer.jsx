@@ -7,18 +7,23 @@ export const IMGContainer = () => {
     const sliderImages = [
         {
             url: "./images/rl.jpg",
+            alt: "Titelbild des Spieles Rocket League Season 9",
         },
         {
             url: "./images/realm.jpg",
+            alt: "Titelbild des Spieles Realm Royale reforged",
         },
         {
             url: "./images/TowerOfFantasy.jpg",
+            alt: "Titelbild des Spieles Tower of Fantasy im Eis Biom",
         },
         {
             url: "./images/SonsForest.jpg",
+            alt: "Titelbild des Spieles Sons of the Forest",
         },
         {
             url: "./images/SeaOfThieves.jpg",
+            alt: "Titelbild des Spieles Sea of Thieves",
         },
     ]
 
@@ -39,10 +44,10 @@ export const IMGContainer = () => {
             <div className="carousel">
                 <i className="fa-solid fa-angle-left" onClick={() => previosImg()}></i>
                 <div>
-                    <img src={sliderImages[currentImg].url} alt="" />
+                    <img src={sliderImages[currentImg].url} alt={sliderImages[currentImg].alt} />
                 </div>
                 <div>
-                    <img src={currentImg > sliderImages.length-2 ? sliderImages[0].url : sliderImages[currentImg+1].url} alt="" />
+                    <img src={currentImg > sliderImages.length-2 ? sliderImages[0].url : sliderImages[currentImg+1].url} alt={currentImg > sliderImages.length-2 ? sliderImages[0].alt : sliderImages[currentImg+1].alt} />
                 </div>
                 <i className="fa-solid fa-angle-right" onClick={() => nextImg()}></i>
             </div>
