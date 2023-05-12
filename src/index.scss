@@ -644,12 +644,8 @@ a:hover{
         padding: var(--mediumSpacer)
       }
 
-      .day, .video, .videoWe, .freeContainer{
+      .day, .video{
         width: 40%;
-      }
-
-      .freeContainer{
-        margin: auto;
       }
 
       .video{
@@ -670,25 +666,6 @@ a:hover{
 
         i{
           width: 100%;
-        }
-      }
-
-      .videoWe{
-        width: 337.77px;
-        height: 19rem;
-        display: flex;
-        margin: auto;
-        border-radius: 50%;
-        overflow: hidden;
-
-        div{
-          width: 50%;
-          overflow: hidden;
-
-          video{
-            translate: -25%;
-            border-radius: 0%;
-          }
         }
       }
     }
