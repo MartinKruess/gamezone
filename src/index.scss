@@ -618,7 +618,6 @@ a:hover{
   flex-wrap: wrap;
   margin: auto;
   padding: var(--largeSpacer);
-  border: solid 1px;
 
   .planContainer{
     width: 100%;
@@ -949,6 +948,63 @@ a:hover{
       margin: var(--mediumSpacer);
       padding: var(--largeSpacer) var(--smallSpacer);
       border: solid 1px;
+    }
+  }
+
+  .articleForm{
+
+    form{
+      background-color: var(--secondary);
+      width: 60%;
+      font-size: 2rem;
+      margin: auto;
+      padding: 2rem;
+      border: solid 1px var(--secondary);
+      border-radius: 1rem;
+
+      label{
+        width: 100%;
+        min-height: 5rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+
+        span{
+          width: 20rem;
+          display: inline-block;
+          padding: 0 2rem;
+          margin: 0 2rem;
+        }
+
+        input, textarea{
+          width: 60rem;
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+          margin-left: auto;
+        }
+
+        input[name="type"],
+        input[name="gender"],
+        input[name="price"],
+        input[name="drachenmünzen"]{
+          width: 16rem;
+        }
+
+        textarea{
+          padding: 0.8rem 1.5rem;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          resize: none;
+          border-radius: 2rem;
+          overflow: hidden;
+        }
+
+        input:focus, textarea:focus{
+          background-color: rgb(185, 231, 249);
+          outline-color: red;
+          outline-style: groove;
+        }
+      }
     }
   }
 }

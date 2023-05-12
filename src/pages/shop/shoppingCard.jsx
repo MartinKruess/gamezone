@@ -3,7 +3,7 @@ import { merches } from "../merch";
 import { ShopContext } from "../../global/useContext";
 
 export const ShopCard = () => {
-  const {type, setType, filter,  setFilter} = useContext(ShopContext)
+  const {type, filter} = useContext(ShopContext)
   const [merchArr, setMerchArr] = useState(merches)
 
   const filteredArticles = merches.filter((merch => merch.type === type))
@@ -25,7 +25,7 @@ export const ShopCard = () => {
 
   useEffect(() => {
     console.log("filteredArticles", filteredArticles)
-    console.log("merchArr", merchArr)
+    console.log("merchArr", merchArr[0].image)
   }, [merchArr])
 
   return (
@@ -34,7 +34,7 @@ export const ShopCard = () => {
         <div key={i} className="shopPreviewContainer">
           <h3>{article.title}</h3>
           <div className="shopPreviewCard">
-            <img src={article.img} alt="" ></img>
+            <img src={article.image} alt="" ></img>
           </div>
           <p>{article.type}</p>
           <p>{article.sells}</p>
