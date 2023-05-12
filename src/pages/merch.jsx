@@ -1,16 +1,12 @@
+import { useState } from "react";
 import { backendURL } from "../App";
 import { ShopFilter } from "./shop/shopFilter";
 import { ShopCard } from "./shop/shoppingCard";
 
-
-
-
-
-export const merches = await res.json()
-
 export const Merch = async () => {
+  const [merches, setMerches] = useState([])
 
-    const res = await fetch(`http://localhost:5500/merchArticles`, {
+    const res = await fetch(`${backendURL}/merchArticles`, {
     method: 'post',
     withCredentials: true,
 
@@ -20,10 +16,12 @@ export const Merch = async () => {
     }
   })
 
+  merches = await res.json()
+
   return (
     <section className="shopContainer">
       <ShopFilter />
-      <ShopCard />
+      <ShopCard  merches={merches}/>
     </section>
   );
 };

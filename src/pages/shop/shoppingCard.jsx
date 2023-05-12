@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { merches } from "../merch";
 import { ShopContext } from "../../global/useContext";
 
-export const ShopCard = () => {
+export const ShopCard = (props) => {
   const {type, filter} = useContext(ShopContext)
+  const merches = props.merches
   const [merchArr, setMerchArr] = useState(merches)
 
   const filteredArticles = merches.filter((merch => merch.type === type))
