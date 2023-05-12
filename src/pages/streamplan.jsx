@@ -17,7 +17,7 @@ export const Streamplan = () => {
               autoPlay={true}
               muted={true}
               loop={true}
-              src="/videos/rl_vid.mp4"
+              src="/videos/rl_vid_op.mp4"
             ></video>
           </div>
           <div className="social">
@@ -54,7 +54,7 @@ export const Streamplan = () => {
                   autoPlay={true}
                   muted={true}
                   loop={true}
-                  src="/videos/rl_vid.mp4"
+                  src="/videos/rl_vid_op.mp4"
                 ></video>
               </div>
               <div>
