@@ -1,199 +1,11 @@
-:last-child:root {
-  font-size: 62.5%;
-  --primary: #0d1117;
-  --secondary: #161b22;
-  --font: #ededed;
-  --button01: #ed0000;
-  --button02: #ed3300;
-  --button03: #ed7733;
-  --highlights: #009999;
-  --smallSpacer: 0.5rem;
-  --mediumSpacer: 1rem;
-  --largeSpacer: 1.5rem;
-  --xlargeSpacer: 2.5rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border-radius: 0.3rem;
-}
-
-body {
-  background-color: var(--primary);
-  color: var(--font);
-  font-size: 1.6rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-// Global settings
-
-section{
-  width: 80%;
-  margin: auto;
-}
-
-article{
-  padding: 3rem 0;
-}
-
-h1,h2,h3,h4{
-  width: 100%;
-}
-
-h1{
-  font-size: 5rem;
-}
-
-h2{
-  margin: var(--largeSpacer) 0 var(--smallSpacer);
-  padding: var(--mediumSpacer) 0 var(--smallSpacer);
-}
-
-.spacer{
-  max-width: 40%;
-}
-
-.button, button {
-  background-color: var(--button02);
-  color: var(--font);
-  width: 13.5rem;
-  padding: var(--mediumSpacer) var(--largeSpacer);
-  margin: 0 1rem;
-  border: solid 1px;
-  border-radius: 0.8rem;
-}
-
-button:hover, button:hover{
-  background-color: var(--button03);
-  color: var(--secondary);
-  font-weight: 600;
-  border: solid 3px var(--button02);
-}
-
-a{
-  width: 100%;
-  color: var(--font);
-  text-decoration: none;
-}
-
-a:hover{
-  background-color: #ccccccee;
-  color: var(--secondary);
-  font-weight: 600;
-}
-
-// header
-.headerContainer{
-  height: 15rem;
-  width: 100%;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  padding: 0 var(--mediumSpacer) ;
-
-  .logoContainer{
-    width: 15rem;
-    height: 100%;
-    display: flex;
-
-    img{
-      height: 100%;
-    }
-  }
-
-  .socialContainer{
-    width: 25rem;
-    display: flex;
-    align-items: center;
-
-    a{
-      width: 6rem;
-      height: 6rem;
-      font-size: 3rem;
-      margin: var(--mediumSpacer) var(--smallSpacer);
-      margin-top: var(--mediumSpacer);
-      padding: var(--smallSpacer) var(--mediumSpacer);
-    }
-
-    .discord{
-      padding: var(--smallSpacer);
-    }
-  }
-}
-
-// Navbar
-.navbarContainer {
-  background-color: var(--secondary);
-  display: flex;
-  justify-content: end;
-  padding: 2rem;
-  margin: 0 0 3rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-
-  i{
-    font-size: 2.1rem;
-  }
-
-  .dropdownMenu{
-    background-color: var(--secondary);
-    width: 16rem;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 7.5rem;
-    right: 2rem;
-    padding: 1rem;
-    font-size: 1.8rem;
-    line-height: 3rem;
-    box-shadow:
-    var(--highlights) 1px 1px 1px,
-    var(--highlights) -1px -1px 1px,
-    var(--highlights) -1px 1px 1px,
-    var(--highlights) 1px -1px 1px;
-
-    .button{
-      width: 14rem;
-      padding:0;
-    }
-  }
-}
-
-@media screen and (max-width: 650px) {
-
-  .navbarContainer{
-    padding: 2rem 0.5rem;
-
-    .dropdownMenu{
-      width: 25rem;
-      padding: 0.5rem;
-  
-      .button{
-        margin: 0.4rem;
-        padding: 0.5rem 0.8rem;
-      }
-    }
-  }
-
-  .spacer{
-    width: 0%;
-  }
-}
+@import "./scss_src/variables";
+@import "./scss_src/globalSettings";
+@import "./scss_src/header";
+@import "./scss_src/navi";
+@import "./scss_src/footer";
 
 // Landingpage
 .landingpage{
-  //height: 100vh;
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
@@ -214,14 +26,15 @@ a:hover{
         display: flex;
         justify-content: space-around;
         margin: 2rem 0;
+        padding: 2rem 0;
         transition: cubic-bezier(5);
 
         i{
-          width: 5rem;
+          width: 4.8rem;
           font-size: 4rem;
           text-align:center;
           align-self: center;
-          padding: 5.5rem 1rem;
+          padding: 5.5rem 0.8rem;
           cursor: pointer;
           border: none;
           border-radius: 2rem;
@@ -245,8 +58,8 @@ a:hover{
 
         .shopPreviewContainer{
           background-color: var(--secondary);
-          width: 38rem;
-          height: 60rem;
+          width: 34rem;
+          height: 58rem;
           position: relative;
           border: solid red 0.2rem;
           box-shadow: 
@@ -429,22 +242,6 @@ a:hover{
           padding: var(--smallSpacer) var(--mediumSpacer);
         }
       }
-
-      // .left, .right{
-      //   width: 30%;
-      // }
-      // .center{
-      //   width:100%;
-      //   img{
-      //     width: 30%;
-      //   }
-      // }
-      // .banner{
-      //   width: 100%;
-      // }
-      // .icon{
-      //   width: 10%;
-      // }
     }
   }
 }
@@ -496,7 +293,6 @@ a:hover{
       width: 38rem;
       height: 60rem;
       position: relative;
-      margin: 2rem 2rem;
       border: solid red 0.2rem;
       box-shadow: 
       0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
@@ -579,35 +375,39 @@ a:hover{
     height: 30rem;
     margin: 1.3rem;
     border-radius: 9rem;
-  }
 
-  .date{
-    background: linear-gradient(45deg, #111010cc 0%, #18181866 60%, #504f4fcc 120%);
-    width: 30rem;
-    height: 30rem;
-    margin: auto;
-    padding: 1.3rem;
-    position: relative;
-    border: solid 1px var(--font);
-    border-radius: 5rem;
-    box-shadow:
-    2px 2px 6px 2px #959595,
-    2px 2px 6px 2px #e20a0a,
-    -2px 2px 6px 2px #959595,
-    2px -2px 6px 2px #e20a0a;
-    
+    .date{
+      background: linear-gradient(45deg, #111010cc 0%, #18181866 60%, #504f4fcc 120%);
+      width: 30rem;
+      height: 30rem;
+      margin: auto;
+      padding: 1.3rem;
+      position: relative;
+      border: solid 1px var(--font);
+      border-radius: 5rem;
+      box-shadow:
+      2px 2px 6px 2px #959595,
+      2px 2px 6px 2px #e20a0a,
+      -2px 2px 6px 2px #959595,
+      2px -2px 6px 2px #e20a0a;
+      
 
-    h3{
-      font-size: 3rem;
-      padding-bottom: 2rem;
-    }
+      h2{
+        font-size: 3.5rem;
+        padding-bottom: 2rem;
+      }
 
-    .dateText{
-      color: #ededed66;
-      font-size: 5rem;
-      position: absolute;
-      bottom: 0.5rem;
-      right: 1rem;
+      p{
+        font-size: 1.7rem;
+      }
+
+      .dateText{
+        color: #ededed66;
+        font-size: 5rem;
+        position: absolute;
+        bottom: 0.5rem;
+        right: 2.7rem;
+      }
     }
   }
 }
@@ -805,72 +605,6 @@ a:hover{
 }
 
 
-
-.footerContainer{
-  background-color: var(--secondary);
-  width: 100%;
-  height: 13.5rem;
-  display: flex;
-  flex-wrap: wrap;justify-content: end;
-  margin-top: var(--xlargeSpacer);
-  padding: var(--xlargeSpacer);
-
-  .aboutContainer{
-    width: 30%;
-  }
-
-  .linkContainer{
-    min-width: 40%;
-    font-size: 4rem;
-    padding: var(--mediumSpacer);
-
-    i{
-      width: 8rem;
-      height: 100%;
-      border: none;
-      padding: var(--mediumSpacer);
-    }
-
-    a:hover{
-      background-color: transparent;
-    }
-
-    .fa-discord{
-      color: var(--font);
-    }
-    .fa-discord:hover{
-      background-color: blue;
-      color: var(--secondary);
-    }
-    .fa-twitch{
-      color: rgba(172, 46, 210, 0.872);
-    }
-    .fa-youtube{
-      color: rgb(198, 6, 6);
-    }
-    .fa-twitch:hover, .fa-youtube:hover{
-      background-color: var(--font);
-    }
-    .fa-tiktok{
-      color: var(--primary);
-    }
-    .fa-tiktok:hover{
-      background-color: var(--primary);
-      color: var(--font);
-    }
-    .fa-patreon{
-      color: rgba(255, 77, 0, 0.867);
-    }
-    .fa-patreon:hover{
-      color: rgb(254, 100, 34);
-    }
-  }
-  
-    ul li{
-      list-style: none;
-    }
-}
-
 .loginPage{
   height: 60vh;
   display: flex;
@@ -986,81 +720,4 @@ a:hover{
   }
 }
 
-
-
-// Mediaquerry
-@media only screen and (max-width: 1200px) {
-  .streamplanContainer{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: var(--largeSpacer);
-   
-  
-    .planContainer{
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: start;
-      margin: auto;
-
-      .planCard{
-        width: 100%;
-        height: 22rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        vertical-align: middle;
-        font-size: 2.6rem;
-        font-weight: 600;
-        margin: 0.7rem;
-        padding: var(--smallSpacer);
-        
-
-        .day, .video, .freeContainer{
-          width: 50%;
-        }
-      }
-
-      .free{
-        height: 12rem;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  .streamplanContainer{
-    flex-direction: column;
-    padding:0;
-    border: solid red;
-
-    .planContainer{
-      width: 100%;
-
-      .planCard{
-        width: 100%;
-        height: 33rem;
-        justify-content: space-around;
-        flex-direction: column;
-        
-        .day{
-          margin: var(--mediumSpacer) 0;
-        }
-
-        .video{
-          width: 100%;
-          
-          video{
-            width: 100%
-          }
-        }
-      }
-
-      .free{
-        height: 12rem;
-      }
-    }
-  }  
-}
+@import "./scss_src/mediaQueries";

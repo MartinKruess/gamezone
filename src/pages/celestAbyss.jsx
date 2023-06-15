@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NewsCard } from "../components/newsCard";
 
 

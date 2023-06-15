@@ -190,7 +190,7 @@ export const ShopContainer = () => {
                             : sliderArticles[currentArticle+2].image}
                         alt="" />
                     </div>
-                    <p>
+                    <p className="description">
                         {currentArticle > sliderArticles.length-3
                         ? sliderArticles[0].description
                         : sliderArticles[currentArticle+2].description}

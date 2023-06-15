@@ -1,12 +1,21 @@
 import { useContext, useEffect, useState } from "react";
-import { merches } from "../merch";
 import { ShopContext } from "../../global/useContext";
+import { loadData } from "../../global/loadData";
 
 export const ShopCard = () => {
   const {type, filter} = useContext(ShopContext)
+  const [merches, setMerches] = useState()
   const [merchArr, setMerchArr] = useState(merches)
 
-  const filteredArticles = merches.filter((merch => merch.type === type))
+  useEffect(() => {
+    const dataFetch = async () => {
+      const result = await loadData("shop/merchArticles")
+      setMerches(result)
+    }
+    dataFetch()
+  }, [])
+
+  const filteredArticles = merches && merches.filter((merch => merch.type === type))
 
   const sortMethods = {
     default: { method: (a, b) => null },
@@ -30,7 +39,7 @@ export const ShopCard = () => {
 
   return (
     <article>
-      {merchArr.sort(sortMethods[filter].method).map((article, i) => (
+      {merches && merchArr.sort(sortMethods[filter].method).map((article, i) => (
         <div key={i} className="shopPreviewContainer">
           <h3>{article.title}</h3>
           <div className="shopPreviewCard">
