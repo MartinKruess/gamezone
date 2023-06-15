@@ -1,23 +1,16 @@
-import { useState } from "react";
-import { backendURL } from "../App";
 import { ShopFilter } from "./shop/shopFilter";
 import { ShopCard } from "./shop/shoppingCard";
 
-export const Merch = async () => {
-  const [merches, setMerches] = useState([])
+export const merches = [
+  {
+    title: "abc"
+  },
+  {
+    title: "fgd"
+  }
+]
 
-    const res = await fetch(`${backendURL}/merchArticles`, {
-    method: 'post',
-    withCredentials: true,
-
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    }
-  })
-
-  merches = await res.json()
-
+export const Merch = () => {
   return (
     <section className="shopContainer">
       <ShopFilter />

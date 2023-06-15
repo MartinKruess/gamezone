@@ -1,0 +1,38 @@
+// Navbar
+.navbarContainer {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+    margin: 0 0 3rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  
+    i{
+      font-size: 2.1rem;
+    }
+  
+    .dropdownMenu{
+      background-color: var(--secondary);
+      width: 16rem;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 7.5rem;
+      right: 2rem;
+      padding: 1rem;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      box-shadow:
+      var(--highlights) 1px 1px 1px,
+      var(--highlights) -1px -1px 1px,
+      var(--highlights) -1px 1px 1px,
+      var(--highlights) 1px -1px 1px;
+  
+      .button{
+        width: 14rem;
+        padding:0;
+      }
+    }
+  }

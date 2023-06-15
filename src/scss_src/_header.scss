@@ -1,0 +1,38 @@
+// header
+.headerContainer{
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 var(--mediumSpacer) ;
+  
+    .logoContainer{
+      width: 15rem;
+      height: 100%;
+      display: flex;
+  
+      img{
+        height: 100%;
+      }
+    }
+  
+    .socialContainer{
+      width: 25rem;
+      display: flex;
+      align-items: center;
+  
+      a{
+        width: 6rem;
+        height: 6rem;
+        font-size: 3rem;
+        margin: var(--mediumSpacer) var(--smallSpacer);
+        margin-top: var(--mediumSpacer);
+        padding: var(--smallSpacer) var(--mediumSpacer);
+      }
+  
+      .discord{
+        padding: var(--smallSpacer);
+      }
+    }
+  }

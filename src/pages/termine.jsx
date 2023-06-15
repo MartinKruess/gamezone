@@ -21,11 +21,11 @@ export const Termine = () => {
         <article className="terminContainer">
             {dateArr.map((date) => (
                 <div className="dateBG">
-                <div className="date">
-                    <h2>{date.title}</h2>
-                    <p>{date.details}</p>
-                    <p className="dateText">{date.date}</p>
-                </div>
+                    <div className="date">
+                        <h2>{date.title}</h2>
+                        <p>{date.details}</p>
+                        <p className="dateText">{date.date}</p>
+                    </div>
                 </div>
             ))}
         </article>

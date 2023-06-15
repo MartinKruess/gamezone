@@ -1,0 +1,131 @@
+@media screen and (max-width: 700px) {
+
+  .navbarContainer{
+    padding: 2rem 0.5rem;
+
+    .dropdownMenu{
+      width: 25rem;
+      padding: 0.5rem;
+  
+      .button{
+        margin: 0.4rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 701px) and (max-width: 900px) {
+
+    .terminContainer{
+      .dateBG:nth-child(2), .dateBG:nth-child(3) {
+        display: none !important;
+      }
+    }
+    
+    .streamplanContainer{
+      flex-direction: column;
+      padding:0;
+      border: solid red;
+  
+      .planContainer{
+        width: 100%;
+  
+        .planCard{
+          width: 100%;
+          height: 33rem;
+          justify-content: space-around;
+          flex-direction: column;
+          
+          .day{
+            margin: var(--mediumSpacer) 0;
+          }
+  
+          .video{
+            width: 100%;
+            
+            video{
+              width: 100%
+            }
+          }
+        }
+  
+        .free{
+          height: 12rem;
+        }
+      }
+    }  
+  }
+}  
+
+@media screen and (min-width: 901px) and (max-width: 1400px)  {
+
+  .terminContainer{
+    .dateBG{
+      width: 20rem;
+      height: 20rem;
+      border-radius: 5rem;
+  
+      .date{
+        width: 20rem;
+        height: 20rem;
+        padding: 0.2rem 0.9rem;
+    
+        h2{
+          font-size: 2.5rem;
+          padding-top: 0;
+          padding-bottom: 0.2rem;
+        }
+
+        p{
+          font-size: 1.5rem;
+        }
+    
+        .dateText{
+          font-size: 2.7rem;
+          right: 3.5rem;
+        }
+      }
+    }
+  }
+
+    .streamplanContainer{
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      padding: var(--largeSpacer);
+     
+    
+      .planContainer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        margin: auto;
+  
+        .planCard{
+          width: 100%;
+          height: 22rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          vertical-align: middle;
+          font-size: 2.6rem;
+          font-weight: 600;
+          margin: 0.7rem;
+          padding: var(--smallSpacer);
+          
+  
+          .day, .video, .freeContainer{
+            width: 50%;
+          }
+        }
+  
+        .free{
+          height: 12rem;
+        }
+      }
+    }
+  }
+  
+  

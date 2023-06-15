@@ -1,0 +1,64 @@
+.footerContainer{
+    background-color: var(--secondary);
+    width: 100%;
+    height: 13.5rem;
+    display: flex;
+    flex-wrap: wrap;justify-content: end;
+    margin-top: var(--xlargeSpacer);
+    padding: var(--xlargeSpacer);
+  
+    .aboutContainer{
+      width: 30%;
+    }
+  
+    .linkContainer{
+      min-width: 40%;
+      font-size: 4rem;
+      padding: var(--mediumSpacer);
+  
+      i{
+        width: 8rem;
+        height: 100%;
+        border: none;
+        padding: var(--mediumSpacer);
+      }
+  
+      a:hover{
+        background-color: transparent;
+      }
+  
+      .fa-discord{
+        color: var(--font);
+      }
+      .fa-discord:hover{
+        background-color: blue;
+        color: var(--secondary);
+      }
+      .fa-twitch{
+        color: rgba(172, 46, 210, 0.872);
+      }
+      .fa-youtube{
+        color: rgb(198, 6, 6);
+      }
+      .fa-twitch:hover, .fa-youtube:hover{
+        background-color: var(--font);
+      }
+      .fa-tiktok{
+        color: var(--primary);
+      }
+      .fa-tiktok:hover{
+        background-color: var(--primary);
+        color: var(--font);
+      }
+      .fa-patreon{
+        color: rgba(255, 77, 0, 0.867);
+      }
+      .fa-patreon:hover{
+        color: rgb(254, 100, 34);
+      }
+    }
+    
+      ul li{
+        list-style: none;
+      }
+  }
