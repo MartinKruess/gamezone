@@ -13,49 +13,49 @@
       }
     }
   }
+}
 
-  @media screen and (min-width: 701px) and (max-width: 900px) {
+@media screen and (min-width: 701px) and (max-width: 900px) {
 
-    .terminContainer{
-      .dateBG:nth-child(2), .dateBG:nth-child(3) {
-        display: none !important;
+  .terminContainer{
+    .dateBG:nth-child(2), .dateBG:nth-child(3) {
+      display: none !important;
+    }
+  }
+  
+  .streamplanContainer{
+    flex-direction: column;
+    padding:0;
+    border: solid red;
+
+    .planContainer{
+      width: 100%;
+
+      .planCard{
+        width: 100%;
+        height: 33rem;
+        justify-content: space-around;
+        flex-direction: column;
+        
+        .day{
+          margin: var(--mediumSpacer) 0;
+        }
+
+        .video{
+          width: 100%;
+          
+          video{
+            width: 100%
+          }
+        }
+      }
+
+      .free{
+        height: 12rem;
       }
     }
-    
-    .streamplanContainer{
-      flex-direction: column;
-      padding:0;
-      border: solid red;
-  
-      .planContainer{
-        width: 100%;
-  
-        .planCard{
-          width: 100%;
-          height: 33rem;
-          justify-content: space-around;
-          flex-direction: column;
-          
-          .day{
-            margin: var(--mediumSpacer) 0;
-          }
-  
-          .video{
-            width: 100%;
-            
-            video{
-              width: 100%
-            }
-          }
-        }
-  
-        .free{
-          height: 12rem;
-        }
-      }
-    }  
-  }
-}  
+  }  
+}
 
 @media screen and (min-width: 901px) and (max-width: 1400px)  {
 
@@ -126,6 +126,6 @@
         }
       }
     }
-  }
+}
   
   
