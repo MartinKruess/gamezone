@@ -137,7 +137,7 @@ export const ShopContainer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="shopPreviewContainer">
+                <div className="shopPreviewContainer mobileOff">
                     <h3>
                         {currentArticle > sliderArticles.length-2
                         ? sliderArticles[0].title
@@ -177,7 +177,7 @@ export const ShopContainer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="shopPreviewContainer">
+                <div className="shopPreviewContainer mobileOff tabletOff">
                     <h3>
                         {currentArticle > sliderArticles.length-3
                         ? sliderArticles[0].title

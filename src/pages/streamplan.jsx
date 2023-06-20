@@ -4,12 +4,11 @@ export const Streamplan = () => {
   return (
     <section className="streamplanContainer">
       <Termine />
-
       <h2>Streamplan - Raikun</h2>
       <article className="planContainer">
         <div className="planCard">
           <div className="day">
-            Dienstag und Donnerstag 19-22 Uhr
+            Di & Do 19-22 Uhr
             <p className="streamHeader">Rocket League mit Keksi</p>
           </div>
           <div className="video">
@@ -46,7 +45,7 @@ export const Streamplan = () => {
           </div>
         </div>
         <div className="planCard">
-          <div className="day">Samstag und Sonntag</div>
+          <div className="day">Sa & So</div>
           <div className="video">
             <video
               autoPlay={true}

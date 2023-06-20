@@ -49,6 +49,18 @@ export const CreateItem = () => {
                     <textarea name="description" cols="5" rows="5" maxLength={500} ></textarea>
                 </label>
                 <label>
+                    <span>collection</span>
+                    <input type="text" name="drachenmünzen" />
+                </label>
+                <label>
+                    <span>brand</span>
+                    <input type="text" name="drachenmünzen" />
+                </label>
+                <label>
+                    <span>creator</span>
+                    <input type="text" name="drachenmünzen" />
+                </label>
+                <label>
                     <span>type</span>
                     <input type="text" name="type" />
                 </label>
