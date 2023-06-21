@@ -18,17 +18,24 @@ export const CreateItem = () => {
         drachenmünzen: 0,
     })
 
-    useEffect(() => {
-        console.log("neu angelegter Artikel", article)
-    }, [article])
+    const validation = () => {
+        if(article.title.length > 2 && article.description.length > 2 && article.type.length > 2 && article.price.length > 2 && article.url.length > 2) {
+            saveArticle()
+        }else{
+            return alert("Ups, da fehlen wichtige Angaben!")
+        }
+    }
 
     const saveArticle = () => {
-      const res = fetch('http://localhost:5500/management/item', {
-        method: 'POST', 
-        mode: 'cors', 
-        body: JSON.stringify(article)
-      })
-      console.log("res", res)
+        const res = fetch('http://localhost:5500/management/item', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(article),
+        })
     }
 
     const onChange = (e) => {
@@ -40,48 +47,68 @@ export const CreateItem = () => {
             <h2>Neuen Merch Artikel anlegen</h2>
             <form action="" onChange={(e) => onChange(e)}>
                 <label>
-                    <span>title</span>
-                    <input type="text" name="title" />
+                    <span>Title</span>
+                    <input type="text" name="title" required />
                 </label>
                 <label>
-                    <span>description</span>
+                    <span>Beschreibung</span>
                     {/* <input type="text" name="description" /> */}
-                    <textarea name="description" cols="5" rows="5" maxLength={500} ></textarea>
+                    <textarea name="description" cols="5" rows="5" maxLength={500} required ></textarea>
                 </label>
                 <label>
-                    <span>collection</span>
-                    <input type="text" name="drachenmünzen" />
+                    <span>Collection</span>
+                    <input type="text" name="collection" required />
                 </label>
                 <label>
-                    <span>brand</span>
-                    <input type="text" name="drachenmünzen" />
+                    <span>Image</span>
+                    <input type="text" name="image" />
                 </label>
                 <label>
-                    <span>creator</span>
-                    <input type="text" name="drachenmünzen" />
+                    <span>Brand</span>
+                    <input type="text" name="brand" />
                 </label>
                 <label>
-                    <span>type</span>
-                    <input type="text" name="type" />
+                    <span>Creator</span>
+                    <input type="text" name="creator" required />
                 </label>
                 <label>
-                    <span>gender</span>
-                    <input type="text" name="gender" />
+                    <span>Type</span>
+                    <input type="text" name="type" required />
                 </label>
                 <label>
-                    <span>price</span>
-                    <input type="text" name="price" />
+                    <span>Gender</span>
+                    <input type="text" name="gender" required />
                 </label>
                 <label>
-                    <span>url</span>
-                    <input type="text" name="url" />
+                    <span>Preis</span>
+                    <input type="number" name="price" required />
                 </label>
                 <label>
-                    <span>drachenmünzen</span>
-                    <input type="text" name="drachenmünzen" />
+                    <span>URL</span>
+                    <input type="text" name="url" required />
                 </label>
-                <button onClick={() => saveArticle()}>Save</button>
+                <label>
+                    <span>Drachenmünzen</span>
+                    <input type="number" name="drachenmünzen" />
+                </label>
+                <button type="button" onClick={() => validation()}  >Save</button>
             </form>
+            <div className="shopPreviewContainer">
+                <h3>{article.title}</h3>
+                <div className="shopPreviewCard">
+                    <img src={article.image} alt="" ></img>
+                </div>
+                <p>{article.type}</p>
+                <p>{article.sells}</p>
+                <p className="description">{article.description}</p>
+                <div className="cardFooter">
+                    <p className="price">{article.price} €
+                    </p>
+                    <a href={article.url} target="_blank">zum Artikle</a>
+                </div>
+            </div>
         </article>
     )
 }
+
+// disabled={isDisabled}

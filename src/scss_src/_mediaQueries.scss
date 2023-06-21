@@ -6,6 +6,10 @@
     display: none;
   }
 
+  body{
+    width: 106vw;
+  }
+
   .headerContainer{
     height: 8rem;
 
@@ -111,6 +115,79 @@
   /* CELEST-ABYSS */
 
   /* MERCH-SHOP */
+
+  .shopContainer {
+    width: 100%;
+    margin: 0 0;
+    padding: 0;
+
+    article{
+      margin: 0 0;
+      padding: 0 0;
+      gap: 1rem 1.5rem;
+      
+      .shopPreviewContainer{
+        width: 28rem;
+        height: 50rem;
+        // scale: 0.7;
+        // margin: 2rem -0.3rem;
+        // margin-bottom: 3rem;
+        
+
+        .description{
+          width: 90%;
+          height: 15rem;
+          font-size: 1.3rem;
+          text-align: start;
+          margin: auto;
+  
+          p{
+            margin: 0.2rem;
+          }
+        }
+
+        .cardFooter{
+          width: 90%;
+
+          .price{
+            width: 28%;
+            font-size: 1.8rem;
+          }
+
+          a{
+            width: 45%;
+            font-size: 1.4rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .footerContainer{
+    border: solid;
+
+    .aboutContainer{
+      width: 25%;
+      height: 90%;
+      font-size: 1.4rem;
+      padding: 0;
+    }
+
+    .linkContainer{
+      min-width: 15%;
+      font-size: 2rem;
+      padding: 0;
+
+      i{
+        width: 4rem;
+        height: 80%;
+        padding: var(--mediumSpacer);
+      }
+    }
+  }
+
+  
 }
 
 @media screen and (min-width: 751px) and (max-width: 992px) {

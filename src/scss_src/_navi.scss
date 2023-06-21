@@ -11,6 +11,7 @@
   
     i{
       font-size: 2.1rem;
+      
     }
   
     .dropdownMenu{
@@ -30,12 +31,17 @@
       var(--highlights) -1px -1px 1px,
       var(--highlights) -1px 1px 1px,
       var(--highlights) 1px -1px 1px;
+
+      i{
+        padding: 0.5rem 0 0 0.7rem;
+      }
   
       a{
         max-width: 20rem;
         display: flex;
         justify-content: space-between;
         margin: 0.3rem auto;
+        padding-right: 0.8rem;
       }
     }
   }
