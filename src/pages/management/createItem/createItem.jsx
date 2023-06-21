@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { backendURL } from "../../../App"
 
 export const CreateItem = () => {
     const [article, setArticle] = useState({
@@ -27,7 +28,7 @@ export const CreateItem = () => {
     }
 
     const saveArticle = () => {
-        const res = fetch('http://localhost:5500/management/item', {
+        const res = fetch(`${backendURL}/management/item`, {
             method: 'POST',
             mode: 'cors',
             headers: {
