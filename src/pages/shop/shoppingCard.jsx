@@ -4,18 +4,17 @@ import { loadData } from "../../global/loadData";
 
 export const ShopCard = (props) => {
   const {type, filter} = useContext(ShopContext)
-  const [merches, setMerches] = useState()
-  const [merchArr, setMerchArr] = useState(merches)
+  const [merches, setMerches] = useState([])
+  const [merchArr, setMerchArr] = useState([])
 
   useEffect(() => {
     const dataFetch = async () => {
-      const result = await loadData("shop/merchArticles")
+      const result = await loadData("merchArticles")
       setMerches(result)
+      setMerchArr(result)
     }
     dataFetch()
   }, [])
-
-  const filteredArticles = merches && merches.filter((merch => merch.type === type))
 
   const sortMethods = {
     default: { method: (a, b) => null },
@@ -26,20 +25,14 @@ export const ShopCard = (props) => {
   };
   
   useEffect(() => {
+    const filteredArticles = merches && merches.filter((merch => merch.type === type))
     type === "default" ? setMerchArr(merches) : setMerchArr(filteredArticles)
+    console.log("filteredArticles", filteredArticles, type)
   }, [type])
-
-  useEffect(() => {
-  }, [filter])
-
-  useEffect(() => {
-    console.log("filteredArticles", filteredArticles)
-    console.log("merchArr", merchArr[0].image)
-  }, [merchArr])
 
   return (
     <article>
-      {merches && merchArr.sort(sortMethods[filter].method).map((article, i) => (
+      {merchArr.sort(sortMethods[filter].method).map((article, i) => (
         <div key={i} className="shopPreviewContainer">
           <h3>{article.title}</h3>
           <div className="shopPreviewCard">

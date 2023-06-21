@@ -46,7 +46,7 @@ export const IMGContainer = () => {
                 <div>
                     <img src={sliderImages[currentImg].url} alt={sliderImages[currentImg].alt} />
                 </div>
-                <div>
+                <div className="tabletOff">
                     <img src={currentImg > sliderImages.length-2 ? sliderImages[0].url : sliderImages[currentImg+1].url} alt={currentImg > sliderImages.length-2 ? sliderImages[0].alt : sliderImages[currentImg+1].alt} />
                 </div>
                 <i className="fa-solid fa-angle-right" onClick={() => nextImg()}></i>

@@ -18,7 +18,7 @@ import { CaArticle } from "./pages/caArticle";
 import { CreateMerchArticle } from "./pages/management/createMerchArticle";
 
 
-export const backendURL = "http://localhost:5500";
+export const backendURL = "https://gamezone.cyclic.app/";
 
 function App() {
   return (

@@ -19,7 +19,9 @@ export const Dashboard = () => {
                     <p>Create new Article</p>
                 </div>
             </article>
-            <CreateItem />
+            <article>
+                <CreateItem />
+            </article>
         </section>
     )
 }
