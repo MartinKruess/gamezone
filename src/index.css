@@ -983,7 +983,10 @@ a:hover {
   }
   .shopContainer article .shopPreviewContainer {
     width: 33rem;
-    height: 50rem;
+    height: 52rem;
+  }
+  .shopContainer article .shopPreviewContainer h3 {
+    height: 7.5rem;
   }
   .shopContainer article .shopPreviewContainer .description {
     width: 90%;
