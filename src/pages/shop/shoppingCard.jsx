@@ -39,7 +39,6 @@ export const ShopCard = (props) => {
             <img src={article.image} alt="" ></img>
           </div>
           <p>{article.type}</p>
-          <p>{article.sells}</p>
           <p className="description">{article.description}</p>
           <div className="cardFooter">
             <p className="price">{article.price} €
