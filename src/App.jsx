@@ -14,8 +14,8 @@ import { Footer } from "./components/reusables/footer";
 // MANAGEMENT PAGES
 import { Login } from "./pages/loginpage";
 import { Dashboard } from "./pages/management/dashboard";
-import { CaArticle } from "./pages/caArticle";
-import { CreateMerchArticle } from "./pages/management/createMerchArticle";
+// import { CaArticle } from "./pages/caArticle";
+// import { CreateMerchArticle } from "./pages/management/createMerchArticle";
 
 
 export const backendURL = "https://gamezone.cyclic.app/";
@@ -37,8 +37,8 @@ function App() {
         {/* MANAGEMENT PAGES */}
         <Route exact path="/management/login" element={<Login />} /> 
         <Route exact path="/management/dashboard" element={<Dashboard />} />
-        <Route exact path="/management/celestabyss" element={<CaArticle />} />
-        <Route exact path="/management/merch" element={<CreateMerchArticle />} />
+        {/* <Route exact path="/management/celestabyss" element={<CaArticle />} /> */}
+        {/* <Route exact path="/management/merch" element={<CreateMerchArticle />} /> */}
       </Routes>
       <Footer />
     </main>

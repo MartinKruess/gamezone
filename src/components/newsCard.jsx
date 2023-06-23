@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useEffect } from "react"
-import { backendURL } from "../App"
 import { loadData } from "../global/loadData"
+
+// BLOCK POSTS
 
 export const NewsCard = () => {
   const [allArticles, setAllArticles] = useState([])
@@ -22,6 +23,7 @@ export const NewsCard = () => {
     console.log("all", allArticles)
     const arr = allArticles.sort((a, b) => Number(b.date) - Number(a.date))
     setRestructedArticles( arr )
+    console.log("Restructured", restructedArticles)
   }, [allArticles, restructedArticles])
 
   useEffect(() => {

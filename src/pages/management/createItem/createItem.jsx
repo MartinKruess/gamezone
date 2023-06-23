@@ -44,7 +44,7 @@ export const CreateItem = () => {
       }
 
     return(
-        <article className="articleForm">
+        <article className="articleForm" id="merch">
             <h2>Neuen Merch Artikel anlegen</h2>
             <form action="" onChange={(e) => onChange(e)}>
                 <label>
@@ -53,7 +53,6 @@ export const CreateItem = () => {
                 </label>
                 <label>
                     <span>Beschreibung</span>
-                    {/* <input type="text" name="description" /> */}
                     <textarea name="description" cols="5" rows="5" maxLength={500} required ></textarea>
                 </label>
                 <label>
@@ -111,5 +110,3 @@ export const CreateItem = () => {
         </article>
     )
 }
-
-// disabled={isDisabled}

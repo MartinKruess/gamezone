@@ -649,6 +649,11 @@
   justify-content: start;
   flex-direction: column;
 
+  #merch, #ca {
+    margin: 13rem 0;
+    padding: 10rem;
+  }
+
   .dashboard{
     display: flex;
     flex-wrap: wrap;
@@ -658,8 +663,12 @@
       width: 25rem;
       height: 16rem;
       margin: var(--mediumSpacer);
-      padding: var(--largeSpacer) var(--smallSpacer);
+      padding: var(--smallSpacer);
       border: solid 1px;
+
+      i{
+        font-size: 6rem;
+      }
     }
   }
 

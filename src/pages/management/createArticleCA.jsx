@@ -35,8 +35,8 @@ export const CreateArticleCA = () => {
   }
   
   return (
-    <article>
-      <h1>Lege einen neuen Blog-Artikel an!</h1>
+    <article id="ca">
+      <h2>Neuer Celest Abyss Blog-Post</h2>
       <div className="articleMenu">
         <button onClick={() => setPreview(true)} className="button">Preview</button>
         <button onClick={() => setPreview(false)} className="button">Details</button>
