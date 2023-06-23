@@ -143,11 +143,15 @@ a:hover {
   line-height: 3rem;
   box-shadow: var(--highlights) 1px 1px 1px, var(--highlights) -1px -1px 1px, var(--highlights) -1px 1px 1px, var(--highlights) 1px -1px 1px;
 }
+.navbarContainer .dropdownMenu i {
+  padding: 0.5rem 0 0 0.7rem;
+}
 .navbarContainer .dropdownMenu a {
   max-width: 20rem;
   display: flex;
   justify-content: space-between;
   margin: 0.3rem auto;
+  padding-right: 0.8rem;
 }
 
 .footerContainer {
@@ -449,6 +453,7 @@ a:hover {
   background-color: var(--secondary);
   width: 38rem;
   height: 60rem;
+  margin: 1.5rem 1.5rem;
   position: relative;
   border: solid red 0.2rem;
   box-shadow: 0.1rem 0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4), -0.1rem -0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4), -0.1rem 0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4), 0.1rem -0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4);
@@ -745,6 +750,10 @@ a:hover {
   justify-content: start;
   flex-direction: column;
 }
+.dashboardContainer #merch, .dashboardContainer #ca {
+  margin: 13rem 0;
+  padding: 10rem;
+}
 .dashboardContainer .dashboard {
   display: flex;
   flex-wrap: wrap;
@@ -754,15 +763,25 @@ a:hover {
   width: 25rem;
   height: 16rem;
   margin: var(--mediumSpacer);
-  padding: var(--largeSpacer) var(--smallSpacer);
+  padding: var(--smallSpacer);
   border: solid 1px;
+}
+.dashboardContainer .dashboard .dashboardMenu i {
+  font-size: 6rem;
+}
+.dashboardContainer .articleForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.dashboardContainer .articleForm h2 {
+  margin-bottom: 2rem;
 }
 .dashboardContainer .articleForm form {
   background-color: var(--secondary);
-  width: 60%;
+  width: 40%;
   font-size: 2rem;
-  margin: auto;
-  padding: 2rem;
+  padding: 1.5rem;
   border: solid 1px var(--secondary);
   border-radius: 1rem;
 }
@@ -804,11 +823,73 @@ a:hover {
   outline-color: red;
   outline-style: groove;
 }
+.dashboardContainer .articleForm .shopPreviewContainer {
+  background-color: var(--secondary);
+  width: 34rem;
+  height: 58rem;
+  position: relative;
+  border: solid red 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4), -0.1rem -0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4), -0.1rem 0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4), 0.1rem -0.1rem 0.8rem 0.2rem rgba(194, 26, 26, 0.4);
+}
+.dashboardContainer .articleForm .shopPreviewContainer h3 {
+  height: 6rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .shopPreviewCard {
+  width: 80%;
+  height: auto;
+  margin: 0.8rem auto;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .shopPreviewCard img {
+  width: 100%;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .description {
+  width: 80%;
+  height: 15rem;
+  font-size: 1.4rem;
+  text-align: start;
+  margin: auto;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .description p {
+  margin: 0.5rem;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .cardFooter {
+  width: 85%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 7.5%;
+  bottom: 1rem;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .cardFooter .price {
+  width: 30%;
+  height: 3.5rem;
+  font-size: 2.2rem;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .cardFooter a {
+  background-color: var(--button02);
+  width: 40%;
+  height: 3.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+.dashboardContainer .articleForm .shopPreviewContainer .cardFooter a:hover {
+  background-color: var(--button01);
+  color: var(--font);
+  font-weight: 600;
+}
 
 @media screen and (max-width: 750px) {
   /* GLOBAL SETTINGS */
   .mobileOff, .tabletOff {
     display: none;
+  }
+  body {
+    max-width: 122vw;
   }
   .headerContainer {
     height: 8rem;
@@ -890,6 +971,61 @@ a:hover {
   }
   /* CELEST-ABYSS */
   /* MERCH-SHOP */
+  .shopContainer {
+    width: 100%;
+    margin: 0 0;
+    padding: 0;
+  }
+  .shopContainer article {
+    margin: 0 0;
+    padding: 0 0;
+    gap: 1rem 1.5rem;
+  }
+  .shopContainer article .shopPreviewContainer {
+    width: 33rem;
+    height: 50rem;
+  }
+  .shopContainer article .shopPreviewContainer .description {
+    width: 90%;
+    height: 15rem;
+    font-size: 1.3rem;
+    text-align: start;
+    margin: auto;
+  }
+  .shopContainer article .shopPreviewContainer .description p {
+    margin: 0.2rem;
+  }
+  .shopContainer article .shopPreviewContainer .cardFooter {
+    width: 90%;
+  }
+  .shopContainer article .shopPreviewContainer .cardFooter .price {
+    width: 28%;
+    font-size: 1.8rem;
+  }
+  .shopContainer article .shopPreviewContainer .cardFooter a {
+    width: 45%;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .footerContainer {
+    border: solid;
+  }
+  .footerContainer .aboutContainer {
+    width: 25%;
+    height: 90%;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  .footerContainer .linkContainer {
+    min-width: 15%;
+    font-size: 2rem;
+    padding: 0;
+  }
+  .footerContainer .linkContainer i {
+    width: 4rem;
+    height: 80%;
+    padding: var(--mediumSpacer);
+  }
 }
 @media screen and (min-width: 751px) and (max-width: 992px) {
   /* GLOBAL SETTINGS */
