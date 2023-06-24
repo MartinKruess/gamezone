@@ -13,7 +13,10 @@ import { Footer } from "./components/reusables/footer";
 
 // MANAGEMENT PAGES
 import { Login } from "./pages/loginpage";
+
+import { PrivateRoute } from "./components/reusables/privateRouter";
 import { Dashboard } from "./pages/management/dashboard";
+
 // import { CaArticle } from "./pages/caArticle";
 // import { CreateMerchArticle } from "./pages/management/createMerchArticle";
 
@@ -35,8 +38,12 @@ function App() {
         <Route exact path="/shop/extras" element={<Shop />} />
 
         {/* MANAGEMENT PAGES */}
-        <Route exact path="/management/login" element={<Login />} /> 
-        <Route exact path="/management/dashboard" element={<Dashboard />} />
+        <Route exact path="/login" element={<Login />} /> 
+        <Route path="/management/dashboard" element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>} />
+        {/* <Route exact path="/management/dashboard" element={<Dashboard />} /> */}
         {/* <Route exact path="/management/celestabyss" element={<CaArticle />} /> */}
         {/* <Route exact path="/management/merch" element={<CreateMerchArticle />} /> */}
       </Routes>
