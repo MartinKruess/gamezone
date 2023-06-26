@@ -7,12 +7,12 @@ import "./index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
-    <UserProvider >
     <GlobalShopFilter >
-      <CelestAbyssNewArticle>
-        <App />
-      </CelestAbyssNewArticle>
+      <UserProvider >
+        <CelestAbyssNewArticle>
+          <App />
+        </CelestAbyssNewArticle>
+      </UserProvider>
     </GlobalShopFilter>
-    </UserProvider>
   </Router>
 );

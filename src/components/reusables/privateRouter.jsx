@@ -4,6 +4,6 @@ import { AppContext } from "../../global/useContext";
 
 
 export const PrivateRoute = ({ children }) => {
-    const {auth} = useContext(AppContext)
-    return auth ? children : <Navigate to="/login" replace/>
+    const {token} = useContext(AppContext)
+    return token ? children : <Navigate to="/login" replace/>
 }

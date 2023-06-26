@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { backendURL } from "../App"
 import { AppContext } from "../global/useContext"
+import { Navigate, useNavigate } from "react-router-dom"
 
 export const Login = () => {
     const {setToken} = useContext(AppContext)
@@ -29,12 +30,12 @@ export const Login = () => {
               })
           
               const resData = await res.json()
-              console.log('resData', resData)
+            //   console.log('resData', resData)
               setToken(resData.auth)
               // setUserData(resData.userData)
               // saveInLocalStorage('auth', resData.auth)
               // saveInLocalStorage('user', resData.userData)
-              // res.status === 200 && navigate('/dashboard', { replace: true })
+            //   res.status === 200 && useNavigate('/dashboard', { replace: true })
         }
     }
 

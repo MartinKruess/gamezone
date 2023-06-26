@@ -7,11 +7,13 @@ export const ShopContext = createContext()
 export const CelestArticleContext = createContext()
 
 // ----------------- LS LOAD -----------------
-const tokenFromLS = getFromLocalStorage('auth')
+const tokenFromLS = getFromLocalStorage('auth' || "ABC")
 const articleFromLS = getFromLocalStorage('newArticle')
+console.log({tokenFromLS})
 
 export const UserProvider = ({ children }) => {
-  const [token, setToken] = useState(tokenFromLS || null)
+  const [token, setToken] = useState(tokenFromLS || "null")
+  console.log({token})
 
   useEffect(() => {
     token ? saveInLocalStorage('auth', token) : deleteInLocalStorage('auth')

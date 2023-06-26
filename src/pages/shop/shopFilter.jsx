@@ -19,10 +19,11 @@ return(
             <option value="default">Alle</option>
             <option value="T-Shirt">T-Shirt</option>
             <option value="V-Shirt">V-Shirt</option>
+            <option value="TankTop">Tank Top</option>
             <option value="Langarmshirt">Langarmshirt</option>
             <option value="Sweater">Sweater</option>
             <option value="Hoodie">Hoodie</option>
-            <option value="Kaputzen-Hoodie">Kaputzen-Hoodie</option>
+            <option value="Kapuzen-Hoodie">Kaputzen-Hoodie</option>
         </select>
         <select name="filterTarget" id=""
         onChange={(e) => getFilterTarget(e)}>
