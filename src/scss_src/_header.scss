@@ -1,11 +1,11 @@
 // header
 .headerContainer{
     height: 15rem;
-    width: 100%;
+    // width: 100%;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding: 0 var(--mediumSpacer) ;
+    // padding: 0 var(--mediumSpacer) ;
   
     .logoContainer{
       width: 15rem;
@@ -25,6 +25,9 @@
         width: 6rem;
         height: 6rem;
         font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: var(--mediumSpacer) var(--smallSpacer);
         margin-top: var(--mediumSpacer);
         padding: var(--smallSpacer) var(--mediumSpacer);

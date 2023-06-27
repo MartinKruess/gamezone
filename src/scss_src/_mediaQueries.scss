@@ -24,6 +24,16 @@
     h1{
       display: none;
     }
+
+    .socialContainer{
+      a{
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      i{
+        font-size: 1.8rem;
+      }
+    }
   }
 
   .navbarContainer{
@@ -119,6 +129,11 @@
 
   .celestSection{
     width: 90%;
+    border: solid;
+
+    h1{
+      font-size: 2.8rem;
+    }
 
     .basicNewsCard{
       width: 100%;
@@ -187,7 +202,6 @@
   }
 
   .footerContainer{
-    border: solid;
 
     .aboutContainer{
       width: 25%;
