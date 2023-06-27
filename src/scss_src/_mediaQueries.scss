@@ -117,6 +117,25 @@
 
   /* CELEST-ABYSS */
 
+  .celestSection{
+    width: 90%;
+
+    .basicNewsCard{
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 2rem 0;
+
+      .newsHeadLine{
+        h2{
+          font-size: 1.5rem;
+        }
+        .date{
+          width: 38%;
+        }
+      }
+    }
+  }
+
   /* MERCH-SHOP */
 
   .shopContainer {
@@ -284,6 +303,25 @@
   }
 
    /* CELEST-ABYSS */
+
+   .celestSection{
+    width: 80%;
+
+    .basicNewsCard{
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 2rem 0;
+
+      .newsHeadLine{
+        h2{
+          font-size: 1.8rem;
+        }
+        .date{
+          width: 38%;
+        }
+      }
+    }
+  }
 
   /* MERCH-SHOP */
 }
