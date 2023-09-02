@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../../global/useContext";
 import { loadData } from "../../global/loadData";
 
-export const ShopCard = (props) => {
+export const ShopCard = () => {
   const {type, filter} = useContext(ShopContext)
   const [merches, setMerches] = useState([])
   const [merchArr, setMerchArr] = useState([])

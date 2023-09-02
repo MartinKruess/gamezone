@@ -8,7 +8,6 @@ import { Header } from "./components/reusables/header";
 import { Navbar } from "./components/reusables/navbar";
 import { Streamplan } from "./pages/streamplan";
 import { Technikshop } from "./pages/technikshop";
-import { Shop } from "./pages/shop";
 import { Footer } from "./components/reusables/footer";
 
 // MANAGEMENT PAGES
@@ -36,7 +35,6 @@ function App() {
         <Route exact path="/shop/merch" element={<Merch />} />
         <Route exact path="/live/streamplan" element={<Streamplan />} />
         <Route exact path="/shop/technik" element={<Technikshop />} />
-        <Route exact path="/shop/extras" element={<Shop />} />
         <Route exact path="/streambg" element={<StreamBG />} />
 
         {/* MANAGEMENT PAGES */}
