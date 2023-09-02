@@ -23,8 +23,6 @@ export const StreamBG = () => {
                    </a>
                 </div>
             </div>
-            
-            
             <article className="assetContainer">
                 <iframe className="chatContainer" src="https://chat.restream.io/embed?token=c3dc5b68-8078-4503-91e0-414ae57cd5dd" frameBorder="0">
                 </iframe>
