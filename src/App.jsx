@@ -16,6 +16,7 @@ import { Login } from "./pages/loginpage";
 
 import { PrivateRoute } from "./components/reusables/privateRouter";
 import { Dashboard } from "./pages/management/dashboard";
+import { StreamBG } from "./pages/streamBG";
 
 // import { CaArticle } from "./pages/caArticle";
 // import { CreateMerchArticle } from "./pages/management/createMerchArticle";
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/live/streamplan" element={<Streamplan />} />
         <Route exact path="/shop/technik" element={<Technikshop />} />
         <Route exact path="/shop/extras" element={<Shop />} />
+        <Route exact path="/streambg" element={<StreamBG />} />
 
         {/* MANAGEMENT PAGES */}
         <Route exact path="/login" element={<Login />} /> 

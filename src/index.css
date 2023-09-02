@@ -18,21 +18,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border-radius: 0.3rem;
 }
 
 body {
   background-color: var(--primary);
   color: var(--font);
+  max-width: 98vw;
   font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  border: solid red;
+}
+
 section {
   width: 85%;
   margin: auto;
+  border: solid;
 }
 
 article {
@@ -86,11 +91,10 @@ a:hover {
 } 
 .headerContainer {
   height: 15rem;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--mediumSpacer);
+  border: solid;
 }
 .headerContainer .logoContainer {
   width: 15rem;
@@ -108,6 +112,9 @@ a:hover {
   width: 6rem;
   height: 6rem;
   font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: var(--mediumSpacer) var(--smallSpacer);
   margin-top: var(--mediumSpacer);
   padding: var(--smallSpacer) var(--mediumSpacer);
@@ -118,10 +125,11 @@ a:hover {
 
 .navbarContainer {
   background-color: var(--secondary);
+  width: 98%;
   display: flex;
   justify-content: end;
+  margin: auto;
   padding: 2rem;
-  margin: 0 0 3rem 0;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -156,7 +164,6 @@ a:hover {
 
 .footerContainer {
   background-color: var(--secondary);
-  width: 100%;
   height: 13.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -510,14 +517,15 @@ a:hover {
 }
 
 .terminContainer {
+  width: 90%;
   display: flex;
-  margin: 0 auto 5rem;
+  justify-content: space-around;
+  margin: auto;
 }
 .terminContainer .dateBG {
   background: url("../public/images/particles.gif") 100%/cover no-repeat;
   width: 30rem;
   height: 30rem;
-  margin: 1.3rem;
   border-radius: 9rem;
 }
 .terminContainer .dateBG .date {
@@ -526,14 +534,16 @@ a:hover {
   height: 30rem;
   margin: auto;
   padding: 1.3rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
   border: solid 1px var(--font);
   border-radius: 5rem;
   box-shadow: 2px 2px 6px 2px #959595, 2px 2px 6px 2px #e20a0a, -2px 2px 6px 2px #959595, 2px -2px 6px 2px #e20a0a;
 }
 .terminContainer .dateBG .date h2 {
   font-size: 3.5rem;
-  padding-bottom: 2rem;
 }
 .terminContainer .dateBG .date p {
   font-size: 1.7rem;
@@ -541,9 +551,6 @@ a:hover {
 .terminContainer .dateBG .date .dateText {
   color: rgba(237, 237, 237, 0.4);
   font-size: 5rem;
-  position: absolute;
-  bottom: 0.5rem;
-  right: 2.7rem;
 }
 
 .streamplanContainer {
@@ -888,10 +895,8 @@ a:hover {
   .mobileOff, .tabletOff {
     display: none;
   }
-  body {
-    max-width: 122vw;
-  }
   .headerContainer {
+    width: 100%;
     height: 8rem;
   }
   .headerContainer .logoContainer {
@@ -902,6 +907,13 @@ a:hover {
   }
   .headerContainer h1 {
     display: none;
+  }
+  .headerContainer .socialContainer a {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .headerContainer .socialContainer i {
+    font-size: 1.8rem;
   }
   .navbarContainer {
     padding: 1.5rem 0.5rem;
@@ -919,10 +931,26 @@ a:hover {
     right: 15%;
     padding: 1rem;
   }
+  .terminContainer {
+    width: 96%;
+  }
   .terminContainer .dateBG:nth-child(2), .terminContainer .dateBG:nth-child(3) {
     display: none !important;
   }
+  .terminContainer .dateBG {
+    width: 26rem;
+    height: 30rem;
+  }
+  .terminContainer .dateBG .date {
+    width: 26rem;
+  }
+  .terminContainer .dateBG .date .dateText {
+    font-size: 3rem;
+  }
   /* LANDINGPAGE */
+  .landingpage {
+    width: 100%;
+  }
   .landingpage .newArticle {
     flex-direction: column;
   }
@@ -970,6 +998,24 @@ a:hover {
     width: 20%;
   }
   /* CELEST-ABYSS */
+  .celestSection {
+    width: 90%;
+    border: solid;
+  }
+  .celestSection h1 {
+    font-size: 2.8rem;
+  }
+  .celestSection .basicNewsCard {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+  .celestSection .basicNewsCard .newsHeadLine h2 {
+    font-size: 1.5rem;
+  }
+  .celestSection .basicNewsCard .newsHeadLine .date {
+    width: 38%;
+  }
   /* MERCH-SHOP */
   .shopContainer {
     width: 100%;
@@ -1011,7 +1057,7 @@ a:hover {
     font-weight: 700;
   }
   .footerContainer {
-    border: solid;
+    width: 100%;
   }
   .footerContainer .aboutContainer {
     width: 25%;
@@ -1096,6 +1142,20 @@ a:hover {
     height: 12rem;
   }
   /* CELEST-ABYSS */
+  .celestSection {
+    width: 80%;
+  }
+  .celestSection .basicNewsCard {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 2rem 0;
+  }
+  .celestSection .basicNewsCard .newsHeadLine h2 {
+    font-size: 1.8rem;
+  }
+  .celestSection .basicNewsCard .newsHeadLine .date {
+    width: 38%;
+  }
   /* MERCH-SHOP */
 }
 @media screen and (min-width: 992px) and (max-width: 1400px) {

@@ -367,14 +367,15 @@
 // Streamplan
 
 .terminContainer{
+  width: 90%;
   display: flex;
-  margin: 0 auto 5rem;
+  justify-content: space-around;
+  margin: auto;
 
   .dateBG{
     background: url("../public/images/particles.gif") 100%/cover no-repeat;
     width: 30rem;
     height: 30rem;
-    margin: 1.3rem;
     border-radius: 9rem;
 
     .date{
@@ -383,7 +384,11 @@
       height: 30rem;
       margin: auto;
       padding: 1.3rem;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-around;
+      // position: relative;
       border: solid 1px var(--font);
       border-radius: 5rem;
       box-shadow:
@@ -395,7 +400,6 @@
 
       h2{
         font-size: 3.5rem;
-        padding-bottom: 2rem;
       }
 
       p{
@@ -405,9 +409,6 @@
       .dateText{
         color: #ededed66;
         font-size: 5rem;
-        position: absolute;
-        bottom: 0.5rem;
-        right: 2.7rem;
       }
     }
   }
@@ -809,5 +810,129 @@
     }
   }
 }
+
+
+// StreamBG
+
+.streamBGContainer{
+  background-color:#111010;
+  width: 100vw;
+  height: 100vh;
+  padding: 2.5rem 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: none;
+  z-index: 3;
+
+  .headContainer{
+    display: flex;
+    gap: 5rem;
+    border: solid  red;
+    
+
+    .socialContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a:hover{
+        background-color: transparent;
+      }
+
+      .yt{
+        width: 13rem;
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 0.3rem #eb2a18;
+        border-top-left-radius: 2rem 1rem;
+        border-top-right-radius: 2rem 1rem;
+        border-bottom-left-radius: 2rem 1rem;
+        border-bottom-right-radius: 2rem 1rem;
+
+        i{
+          color: #eb2a18;
+          text-shadow: 0 0 0.5rem #eb2a18,0 0 1rem #eb2a18,0 0 1.5rem #eb2a18,0 0 2rem #5b241a,0 0 2.5rem #5b241a,0 0 3rem #5b241a;
+          font-size: 6rem;
+        }
+      }
+
+      .yt:hover {
+        background-color: #000;
+        box-shadow:
+        inset 0.1rem 0.2rem 0.6rem 0.1rem #f44d4d,
+        0.1rem 0.2rem 1rem 0.2rem #d12e2e, //UR
+        -0.1rem -0.1rem 0.1rem 0.1rem transparent, //OL
+        -0.1rem 0.1rem 0.1rem 0.1rem transparent, //UL
+        0.1rem -0.1rem 0.1rem 0.1rem transparent, //OR
+        ;
+        animation: border 2s;
+      }
+
+      .twitch{
+        color: rgb(149, 33, 226);
+        font-size: 7rem;
+      }
+
+      // .twitch:hover{
+      //   background-color: #000;
+      //   // box-shadow:
+      //   // inset 0.1rem 0.2rem 0.6rem 0.1rem #f44d4d,
+      //   // 0.1rem 0.2rem 1rem 0.2rem #d12e2e, //UR
+      //   // -0.1rem -0.1rem 0.1rem 0.1rem transparent, //OL
+      //   // -0.1rem 0.1rem 0.1rem 0.1rem transparent, //UL
+      //   // 0.1rem -0.1rem 0.1rem 0.1rem transparent, //OR
+      //   // ;
+      // }
+    }
+  }
+
+}
+
+.videoLogoContainer{
+  width: 40rem;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.videoLogoContainer video{
+  width: 100%;
+  transform: translateY(-29%);
+}
+
+.assetContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rem;
+  border: solid blue;
+}
+
+.videoBorder{
+  width: 80rem;   // 16
+  height: 45rem; // 9
+  border: solid red;
+  border-radius: 0.5rem;
+}
+
+.containerRight{
+  width: 64rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid;
+
+  .chatContainer{
+    width: 60rem;
+    height: 45rem;
+    border: solid;
+  }
+
+}
+
+
+
+
 
 @import "./scss_src/mediaQueries";

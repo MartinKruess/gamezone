@@ -1,11 +1,11 @@
 // Navbar
 .navbarContainer {
     background-color: var(--secondary);
-    width: 100%;
+    width: 98%;
     display: flex;
     justify-content: end;
+    margin: auto;
     padding: 2rem;
-    margin: 0 0 3rem 0;
     position: sticky;
     top: 0;
     z-index: 2;

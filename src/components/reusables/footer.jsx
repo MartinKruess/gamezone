@@ -1,4 +1,5 @@
 export const Footer = () => {
+
 return (
     <section className="footerContainer">
         <article className="aboutContainer">
@@ -15,7 +16,6 @@ return (
             <a href=""><i className="fa-brands fa-tiktok"></i></a>
             <a href=""><i className="fa-brands fa-patreon"></i></a>
         </article>
-        
     </section>
 )
 }
