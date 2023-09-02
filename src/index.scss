@@ -917,7 +917,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 5rem;
+    margin-top: 9rem;
     padding: 2rem;
   
     .chatContainer{
@@ -933,13 +933,13 @@
 
       .videoContainer{
         width: 80rem;   // 16
-        height: 45rem; // 9
+        height: 45.5rem; // 9
         border: solid red;
         border-radius: 0.5rem;
       }
 
       .bottomContainer{
-        height: 22rem;
+        height: 24rem;
         display: flex;
         margin-top: 2rem;
         padding: 0.75rem;
