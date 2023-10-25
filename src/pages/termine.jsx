@@ -1,18 +1,18 @@
 export const Termine = () => {
     const dateArr = [
         {
-            title: "Gamescom",
-            details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nulla molestias amet voluptate iste ab?",
-            date: "26.08.2023",
+            title: "Halloween Night Stream",
+            details: "Wir feiern Helloween im Stream.",
+            date: "31.10.2023",
         },
         {
-            title: "24h Stream",
-            details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nulla molestias amet voluptate iste ab?",
-            date: "02.10.2023",
+            title: "Rocket League Turnier",
+            details: "Die StreamingIndustry veranstaltet ein Rocket League turnier und ich bin dabei.",
+            date: "04-05.11.2023",
         },
         {
             title: "Sylvester",
-            details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nulla molestias amet voluptate iste ab?",
+            details: "Wir feiern Neujahr gemeinsam im Stream.",
             date: "31.12.2023",
         }
     ]

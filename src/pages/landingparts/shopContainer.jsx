@@ -112,6 +112,7 @@ export const ShopContainer = () => {
     }
 
     const nextImg = () => {
+        console.log(currentArticle === sliderArticles.length-1 ? 0 : currentArticle+1)
         setCurrentArticle(currentArticle === sliderArticles.length-1 ? 0 : currentArticle+1)
     }
 

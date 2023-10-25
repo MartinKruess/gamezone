@@ -36,7 +36,7 @@ export const IMGContainer = () => {
     }
 
     const nextImg = () => {
-        setCurrentImg(currentImg === sliderImages.length-1 ? 0 : currentImg+1)
+        setCurrentImg(currentImg === sliderImages.length-1 ? 0 : currentImg+2)
     }
 
     return(

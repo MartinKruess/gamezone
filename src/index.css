@@ -541,14 +541,14 @@ a:hover {
   box-shadow: 2px 2px 6px 2px #959595, 2px 2px 6px 2px #e20a0a, -2px 2px 6px 2px #959595, 2px -2px 6px 2px #e20a0a;
 }
 .terminContainer .dateBG .date h2 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
 }
 .terminContainer .dateBG .date p {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 .terminContainer .dateBG .date .dateText {
   color: rgba(237, 237, 237, 0.4);
-  font-size: 5rem;
+  font-size: 4.3rem;
 }
 
 .streamplanContainer {
@@ -1064,7 +1064,7 @@ a:hover {
     width: 26rem;
   }
   .terminContainer .dateBG .date .dateText {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
   /* LANDINGPAGE */
   .landingpage {
@@ -1300,7 +1300,7 @@ a:hover {
     padding: 0.2rem 0.9rem;
   }
   .terminContainer .dateBG .date h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding-top: 0;
     padding-bottom: 0.2rem;
   }
@@ -1308,7 +1308,7 @@ a:hover {
     font-size: 1.5rem;
   }
   .terminContainer .dateBG .date .dateText {
-    font-size: 2.7rem;
+    font-size: 2.1rem;
     right: 3.5rem;
   }
   .streamplanContainer {
