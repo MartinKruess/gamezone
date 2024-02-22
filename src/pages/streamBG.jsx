@@ -1,5 +1,10 @@
 import { StreamHeader } from "../components/streamBG/streamheader";
 
+/*
+    Change components by intervale???
+    Video, Was verpasst? (YT, TT), Video, Merch/Webseite => repeat
+*/
+
 export const StreamBG = () => {
   return (
     <section className="streamBGContainer">
@@ -12,7 +17,13 @@ export const StreamBG = () => {
         ></iframe>
         <div className="leftContainer">
           <div className="videoContainer">
-            <video src="https://www.tiktok.com/@raikungz/video/7337432950528642337"></video>
+            <video
+              width="794"
+              src="./videos/rl.mp4"
+              muted
+              autoPlay
+              loop
+            ></video>
           </div>
           <div className="bottomContainer">
             <img
