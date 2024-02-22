@@ -20,7 +20,6 @@ import { StreamBG } from "./pages/streamBG";
 // import { CaArticle } from "./pages/caArticle";
 // import { CreateMerchArticle } from "./pages/management/createMerchArticle";
 
-
 export const backendURL = "https://gamezone.cyclic.app/";
 
 function App() {
@@ -38,11 +37,15 @@ function App() {
         <Route exact path="/streambg" element={<StreamBG />} />
 
         {/* MANAGEMENT PAGES */}
-        <Route exact path="/login" element={<Login />} /> 
-        <Route path="/management/dashboard" element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>} />
+        <Route exact path="/login" element={<Login />} />
+        <Route
+          path="/management/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
         {/* <Route exact path="/management/dashboard" element={<Dashboard />} /> */}
         {/* <Route exact path="/management/celestabyss" element={<CaArticle />} /> */}
         {/* <Route exact path="/management/merch" element={<CreateMerchArticle />} /> */}

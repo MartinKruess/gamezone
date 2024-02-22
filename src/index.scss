@@ -5,23 +5,23 @@
 @import "./scss_src/footer";
 
 // Landingpage
-.landingpage{
+.landingpage {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
 
-  .aboutContainer{
+  .aboutContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
 
-    .imgContainer{
+    .imgContainer {
       width: 100%;
       margin: auto;
       overflow: hidden;
 
-      .carousel{
+      .carousel {
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -29,10 +29,10 @@
         padding: 2rem 0;
         transition: cubic-bezier(5);
 
-        i{
+        i {
           width: 4.8rem;
           font-size: 4rem;
-          text-align:center;
+          text-align: center;
           align-self: center;
           padding: 5.5rem 0.8rem;
           cursor: pointer;
@@ -40,63 +40,62 @@
           border-radius: 2rem;
         }
 
-        i:hover{
+        i:hover {
           background-color: var(--secondary);
           color: red;
         }
 
-        div{
+        div {
           width: 50rem;
           height: 30rem;
           overflow: hidden;
-  
-          img{
+
+          img {
             width: 100%;
             height: 100%;
           }
         }
 
-        .shopPreviewContainer{
+        .shopPreviewContainer {
           background-color: var(--secondary);
           width: 34rem;
           height: 58rem;
           position: relative;
           border: solid red 0.2rem;
-          box-shadow: 
-          0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
-          -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
-          -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
-          0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
+          box-shadow: 0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+            -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
+            -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+            0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
 
-          h3{
+          h3 {
             height: 6rem;
             font-size: 2rem;
             padding: 0.5rem;
           }
 
-          .shopPreviewCard{
+          .shopPreviewCard {
             width: 80%;
             height: auto;
             margin: 0.8rem auto;
 
-            img{
+            img {
               width: 100%;
             }
           }
 
-          .description{
+          .description {
             width: 80%;
             height: 15rem;
             font-size: 1.4rem;
             text-align: start;
             margin: auto;
 
-            p{
+            p {
               margin: 0.5rem;
             }
           }
 
-          .cardFooter{
+          .cardFooter {
             width: 85%;
             height: 4rem;
             display: flex;
@@ -106,13 +105,13 @@
             left: 7.5%;
             bottom: 1rem;
 
-            .price{
+            .price {
               width: 30%;
               height: 3.5rem;
               font-size: 2.2rem;
             }
-  
-            a{
+
+            a {
               background-color: var(--button02);
               width: 40%;
               height: 3.5rem;
@@ -121,7 +120,7 @@
               padding: 0.5rem 1rem;
             }
 
-            a:hover{
+            a:hover {
               background-color: var(--button01);
               color: var(--font);
               font-weight: 600;
@@ -132,24 +131,23 @@
     }
   }
 
-  .newArticle{
+  .newArticle {
     display: flex;
     justify-content: center;
 
-    .article{
+    .article {
       width: 40%;
       margin: auto;
       padding: 1rem 3rem;
       border: solid 1px;
-      box-shadow: inset 1px 1px 1px #000,
-      inset 1px 1px 1px #242629;
+      box-shadow: inset 1px 1px 1px #000, inset 1px 1px 1px #242629;
 
-      h2{
+      h2 {
         text-align: start;
-        border-bottom:solid;
+        border-bottom: solid;
       }
 
-      p{
+      p {
         text-align: justify;
       }
     }
@@ -165,7 +163,7 @@
   margin: 1.5rem auto;
   padding: var(--largeSpacer);
 
-  .newsHeadLine{
+  .newsHeadLine {
     width: 100%;
     display: flex;
     border-bottom: solid 1px #ccc;
@@ -175,7 +173,7 @@
       text-align: start;
       padding: 0 var(--mediumSpacer);
     }
-  
+
     .date {
       width: 20%;
       text-align: end;
@@ -197,46 +195,46 @@
     border: solid 2px red;
   }
 
-  .paragraphs{
+  .paragraphs {
     width: 100%;
 
-    .paraTitle{
+    .paraTitle {
       padding: var(--largeSpacer) 0 var(--smallSpacer) 0;
       margin: var(--largeSpacer) 0 var(--smallSpacer) 0;
     }
 
-    .contentContainer{
+    .contentContainer {
       display: flex;
       flex-wrap: wrap;
       margin: var(--mediumSpacer) auto;
 
-      .paraContent{
+      .paraContent {
         min-width: 100%;
         margin: auto;
         padding: var(--mediumSpacer);
 
-        img{
+        img {
           max-width: 100%;
         }
-  
-        .left{
+
+        .left {
           width: 50%;
           float: left;
           padding: var(--smallSpacer) var(--mediumSpacer);
         }
-  
-        .right{
+
+        .right {
           width: 50%;
           float: right;
           padding: var(--smallSpacer) var(--mediumSpacer);
         }
-  
-        .banner{
+
+        .banner {
           width: 100%;
           float: none;
         }
 
-        .icon{
+        .icon {
           width: 20%;
           float: right;
           padding: var(--smallSpacer) var(--mediumSpacer);
@@ -246,15 +244,15 @@
   }
 }
 
-.modal{
-  .part{
+.modal {
+  .part {
     padding: var(--smallSpacer);
     margin: var(--smallSpacer) 0;
   }
 }
 
 // shop settings
-.shopContainer{
+.shopContainer {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
@@ -262,13 +260,13 @@
   margin: auto;
 
   // shop filter
-  .shopFilter{
+  .shopFilter {
     width: 100%;
     display: flex;
     justify-content: end;
     margin-bottom: 0.5rem;
 
-    select{
+    select {
       background-color: transparent;
       color: var(--font);
       width: 15rem;
@@ -276,60 +274,59 @@
       margin: var(--smallSpacer);
       border-radius: var(--smallSpacer);
 
-      option{
+      option {
         background-color: #ccc;
-        color: var(--primary)
+        color: var(--primary);
       }
     }
   }
 
-  article{
+  article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    .shopPreviewContainer{
+    .shopPreviewContainer {
       background-color: var(--secondary);
       width: 38rem;
       height: 60rem;
       margin: 1.5rem 1.5rem;
       position: relative;
       border: solid red 0.2rem;
-      box-shadow: 
-      0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
-      -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
-      -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
-      0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
+      box-shadow: 0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+        -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
+        -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+        0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
 
-      h3{
+      h3 {
         height: 6rem;
         font-size: 2rem;
         padding: 0.5rem;
       }
 
-      .shopPreviewCard{
+      .shopPreviewCard {
         width: 80%;
         height: auto;
         margin: 0.8rem auto;
 
-        img{
+        img {
           width: 100%;
         }
       }
 
-      .description{
+      .description {
         width: 80%;
         height: 15rem;
         font-size: 1.4rem;
         text-align: start;
         margin: auto;
 
-        p{
+        p {
           margin: 0.5rem;
         }
       }
 
-      .cardFooter{
+      .cardFooter {
         width: 85%;
         height: 4rem;
         display: flex;
@@ -339,13 +336,13 @@
         left: 7.5%;
         bottom: 1rem;
 
-        .price{
+        .price {
           width: 30%;
           height: 3.5rem;
           font-size: 2.2rem;
         }
 
-        a{
+        a {
           background-color: var(--button02);
           width: 40%;
           height: 3.5rem;
@@ -353,7 +350,7 @@
           padding: 0.5rem 1rem;
         }
 
-        a:hover{
+        a:hover {
           background-color: var(--button01);
           color: var(--font);
           font-weight: 600;
@@ -363,23 +360,27 @@
   }
 }
 
-
 // Streamplan
 
-.terminContainer{
+.terminContainer {
   width: 90%;
   display: flex;
   justify-content: space-around;
   margin: auto;
 
-  .dateBG{
-    background: url("../public/images/particles.gif") 100%/cover no-repeat;
+  .dateBG {
+    background: url("../public/images/particles.gif") 100% / cover no-repeat;
     width: 30rem;
     height: 30rem;
     border-radius: 9rem;
 
-    .date{
-      background: linear-gradient(45deg, #111010cc 0%, #18181866 60%, #504f4fcc 120%);
+    .date {
+      background: linear-gradient(
+        45deg,
+        #111010cc 0%,
+        #18181866 60%,
+        #504f4fcc 120%
+      );
       width: 30rem;
       height: 30rem;
       margin: auto;
@@ -391,22 +392,18 @@
       // position: relative;
       border: solid 1px var(--font);
       border-radius: 5rem;
-      box-shadow:
-      2px 2px 6px 2px #959595,
-      2px 2px 6px 2px #e20a0a,
-      -2px 2px 6px 2px #959595,
-      2px -2px 6px 2px #e20a0a;
-      
+      box-shadow: 2px 2px 6px 2px #959595, 2px 2px 6px 2px #e20a0a,
+        -2px 2px 6px 2px #959595, 2px -2px 6px 2px #e20a0a;
 
-      h2{
+      h2 {
         font-size: 3.4rem;
       }
 
-      p{
+      p {
         font-size: 1.6rem;
       }
 
-      .dateText{
+      .dateText {
         color: #ededed66;
         font-size: 4.3rem;
       }
@@ -414,21 +411,21 @@
   }
 }
 
-.streamplanContainer{
+.streamplanContainer {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   padding: var(--largeSpacer);
 
-  .planContainer{
+  .planContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
     margin: auto;
-  
-    .planCard{
+
+    .planCard {
       background-color: var(--secondary);
       width: 100%;
       height: 22rem;
@@ -440,24 +437,25 @@
       font-weight: 600;
       margin: 0.7rem;
       border: solid var(--secondary);
-      
-      .streamHeader{
+
+      .streamHeader {
         font-size: 2rem;
-        padding: var(--mediumSpacer)
+        padding: var(--mediumSpacer);
       }
 
-      .day, .video{
+      .day,
+      .video {
         width: 40%;
       }
 
-      .video{
-        video{
+      .video {
+        video {
           height: 19rem;
           border-radius: 50%;
         }
       }
 
-      .social{
+      .social {
         width: 10%;
         height: 100%;
         display: flex;
@@ -466,18 +464,18 @@
         justify-content: space-evenly;
         font-size: 4rem;
 
-        i{
+        i {
           width: 100%;
         }
       }
     }
 
-    .free{
+    .free {
       height: 12rem;
     }
   }
 
-  .planContentConatiner{
+  .planContentConatiner {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -486,7 +484,7 @@
 
 // Celest Abyss
 
-.createForm{
+.createForm {
   background-color: var(--secondary);
   width: 80%;
   min-height: 60rem;
@@ -496,14 +494,14 @@
   flex-wrap: wrap;
   border: solid 1px;
 
-  label{
+  label {
     font-size: 2rem;
     margin: var(--smallSpacer);
     padding: var(--smallSpacer) var(--largeSpacer);
     border: solid 1px;
   }
 
-  input{
+  input {
     width: 70%;
     font-size: 1.8rem;
     margin: var(--smallSpacer) var(--mediumSpacer);
@@ -511,34 +509,33 @@
     border-radius: var(--smallSpacer);
   }
 
-  div{
+  div {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    label{
+    label {
       min-width: 20rem;
       border: red solid 2px;
     }
-  
-    input{
+
+    input {
       width: 80%;
-      padding: var(--smallSpacer) var(--mediumSpacer); 
+      padding: var(--smallSpacer) var(--mediumSpacer);
     }
   }
-  
 
-  .counter{
+  .counter {
     position: relative;
     top: -2rem;
     left: 90%;
   }
 
-  .content{
+  .content {
     width: 100%;
   }
 
-  textarea{
+  textarea {
     width: 100%;
     max-width: 100%;
     height: 30rem;
@@ -548,7 +545,7 @@
     padding: var(--smallSpacer);
   }
 
-  .textarea{
+  .textarea {
     width: 100%;
     max-width: 100%;
     height: 10rem;
@@ -559,8 +556,8 @@
     padding: var(--smallSpacer) var(--mediumSpacer);
   }
 
-  button{
-    background-color:lightgreen;
+  button {
+    background-color: lightgreen;
     width: 20%;
     height: 4rem;
     padding: var(--smallSpacer);
@@ -568,23 +565,22 @@
   }
 }
 
-.articleMenu{
+.articleMenu {
   width: 80%;
   display: flex;
   margin: 1rem auto -1rem auto;
   padding: var(--mediumSpacer);
 
-  button{
+  button {
     width: 50%;
     margin: 0.2rem;
     padding: var(--mediumSpacer);
     border: solid 1px;
-    border-radius: 1rem  1rem 0rem 0rem
-    ;
+    border-radius: 1rem 1rem 0rem 0rem;
   }
 }
 
-.newSpan{
+.newSpan {
   background-color: var(--secondary);
   color: lightgreen;
   width: 80%;
@@ -594,26 +590,25 @@
   border-radius: var(--smallSpacer);
 }
 
-.newSpan:hover{
+.newSpan:hover {
   border: var(--font) solid 1px;
 }
 
-.createArticle{
-  background-color:lightgreen;
-    width: 40%;
-    margin: var(--mediumSpacer);
-    padding: var(--mediumSpacer);
-    border-radius: var(--smallSpacer);
+.createArticle {
+  background-color: lightgreen;
+  width: 40%;
+  margin: var(--mediumSpacer);
+  padding: var(--mediumSpacer);
+  border-radius: var(--smallSpacer);
 }
 
-
-.loginPage{
+.loginPage {
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .loginContainer{
+  .loginContainer {
     width: 30rem;
     display: flex;
     flex-wrap: wrap;
@@ -621,19 +616,19 @@
     padding: var(--xlargeSpacer);
     border: solid;
     border-radius: var(--mediumSpacer);
-  
-    label{
+
+    label {
       width: 100%;
       margin: var(--smallSpacer);
     }
-  
-    input{
+
+    input {
       width: 100%;
       padding: var(--smallSpacer) var(--mediumSpacer);
       border-radius: var(--smallSpacer);
     }
 
-    button{
+    button {
       font-size: 1.7rem;
       font-weight: 600;
       margin-top: var(--mediumSpacer);
@@ -644,45 +639,46 @@
 }
 
 // Dashboard
-.dashboardContainer{
+.dashboardContainer {
   min-height: 80vh;
   display: flex;
   justify-content: start;
   flex-direction: column;
 
-  #merch, #ca {
+  #merch,
+  #ca {
     margin: 13rem 0;
     padding: 10rem;
   }
 
-  .dashboard{
+  .dashboard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  
-    .dashboardMenu{
+
+    .dashboardMenu {
       width: 25rem;
       height: 16rem;
       margin: var(--mediumSpacer);
       padding: var(--smallSpacer);
       border: solid 1px;
 
-      i{
+      i {
         font-size: 6rem;
       }
     }
   }
 
-  .articleForm{
+  .articleForm {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
-    h2{
+    h2 {
       margin-bottom: 2rem;
     }
 
-    form{
+    form {
       background-color: var(--secondary);
       width: 40%;
       font-size: 2rem;
@@ -691,21 +687,22 @@
       border: solid 1px var(--secondary);
       border-radius: 1rem;
 
-      label{
+      label {
         width: 100%;
         min-height: 5rem;
         display: flex;
         align-items: center;
         padding: 0.5rem;
 
-        span{
+        span {
           width: 20rem;
           display: inline-block;
           padding: 0 2rem;
           margin: 0 2rem;
         }
 
-        input, textarea{
+        input,
+        textarea {
           width: 60rem;
           padding: 0.5rem 1rem;
           border-radius: 1rem;
@@ -715,11 +712,11 @@
         input[name="type"],
         input[name="gender"],
         input[name="price"],
-        input[name="drachenmünzen"]{
+        input[name="drachenmünzen"] {
           width: 16rem;
         }
 
-        textarea{
+        textarea {
           padding: 0.8rem 1.5rem;
           font-size: 1.8rem;
           line-height: 2.1rem;
@@ -728,7 +725,8 @@
           overflow: hidden;
         }
 
-        input:focus, textarea:focus{
+        input:focus,
+        textarea:focus {
           background-color: rgb(185, 231, 249);
           outline-color: red;
           outline-style: groove;
@@ -736,47 +734,46 @@
       }
     }
 
-    .shopPreviewContainer{
+    .shopPreviewContainer {
       background-color: var(--secondary);
       width: 34rem;
       height: 58rem;
       position: relative;
       border: solid red 0.2rem;
-      box-shadow: 
-      0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
-      -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
-      -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
-      0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
+      box-shadow: 0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+        -0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66,
+        -0.1rem 0.1rem 0.8rem 0.2rem #c21a1a66,
+        0.1rem -0.1rem 0.8rem 0.2rem #c21a1a66;
 
-      h3{
+      h3 {
         height: 6rem;
         font-size: 2rem;
         padding: 0.5rem;
       }
 
-      .shopPreviewCard{
+      .shopPreviewCard {
         width: 80%;
         height: auto;
         margin: 0.8rem auto;
 
-        img{
+        img {
           width: 100%;
         }
       }
 
-      .description{
+      .description {
         width: 80%;
         height: 15rem;
         font-size: 1.4rem;
         text-align: start;
         margin: auto;
 
-        p{
+        p {
           margin: 0.5rem;
         }
       }
 
-      .cardFooter{
+      .cardFooter {
         width: 85%;
         height: 4rem;
         display: flex;
@@ -786,13 +783,13 @@
         left: 7.5%;
         bottom: 1rem;
 
-        .price{
+        .price {
           width: 30%;
           height: 3.5rem;
           font-size: 2.2rem;
         }
 
-        a{
+        a {
           background-color: var(--button02);
           width: 40%;
           height: 3.5rem;
@@ -801,7 +798,7 @@
           padding: 0.5rem 1rem;
         }
 
-        a:hover{
+        a:hover {
           background-color: var(--button01);
           color: var(--font);
           font-weight: 600;
@@ -811,11 +808,10 @@
   }
 }
 
-
 // StreamBG
 
-.streamBGContainer{
-  background-color:#111010;
+.streamBGContainer {
+  background-color: #111010;
   width: 100vw;
   height: 100vh;
   padding: 2.5rem 5rem;
@@ -827,23 +823,23 @@
 
   // ---------- Head ----------
 
-  .headContainer{
+  .headContainer {
     display: flex;
     justify-content: space-between;
     gap: 5rem;
-    
-    .videoLogoContainer{
+
+    .videoLogoContainer {
       width: 40rem;
       height: 10rem;
       overflow: hidden;
     }
-    
-    .videoLogoContainer video{
+
+    .videoLogoContainer video {
       width: 100%;
       transform: translateY(-29%);
     }
 
-    .breakHeader{
+    .breakHeader {
       color: rgb(26, 25, 25);
       font-size: 7rem;
       font-weight: 700;
@@ -851,29 +847,29 @@
       text-shadow: 0.1rem 0.1rem 1rem #f8c29a;
     }
 
-    .socialContainer{
+    .socialContainer {
       width: 30%;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
-      a{
+      a {
         width: 25rem;
       }
 
-      a:hover{
+      a:hover {
         background-color: transparent;
       }
 
-      i{
+      i {
         font-size: 4rem;
 
-        span{
+        span {
           font-size: 2rem;
         }
       }
 
-      .yt{
+      .yt {
         width: 13rem;
         height: 8rem;
         display: flex;
@@ -885,26 +881,30 @@
         border-bottom-left-radius: 2rem 1rem;
         border-bottom-right-radius: 2rem 1rem;
 
-        i{
+        i {
           color: #eb2a18;
-          text-shadow: 0 0 0.5rem #eb2a18,0 0 1rem #eb2a18,0 0 1.5rem #eb2a18,0 0 2rem #5b241a,0 0 2.5rem #5b241a,0 0 3rem #5b241a;
+          text-shadow: 0 0 0.5rem #eb2a18, 0 0 1rem #eb2a18, 0 0 1.5rem #eb2a18,
+            0 0 2rem #5b241a, 0 0 2.5rem #5b241a, 0 0 3rem #5b241a;
           font-size: 6rem;
         }
       }
 
       .yt:hover {
         background-color: #000;
-        box-shadow:
-        inset 0.1rem 0.2rem 0.6rem 0.1rem #f44d4d,
-        0.1rem 0.2rem 1rem 0.2rem #d12e2e, //UR
-        -0.1rem -0.1rem 0.1rem 0.1rem transparent, //OL
-        -0.1rem 0.1rem 0.1rem 0.1rem transparent, //UL
-        0.1rem -0.1rem 0.1rem 0.1rem transparent, //OR
-        ;
+        box-shadow: inset 0.1rem 0.2rem 0.6rem 0.1rem #f44d4d,
+          0.1rem 0.2rem 1rem 0.2rem #d12e2e,
+          //UR
+          -0.1rem -0.1rem 0.1rem 0.1rem transparent,
+          //OL
+          -0.1rem 0.1rem 0.1rem 0.1rem transparent,
+          //UL
+          0.1rem -0.1rem 0.1rem 0.1rem transparent,
+          //OR
+;
         animation: border 2s;
       }
 
-      .twitch{
+      .twitch {
         color: rgb(149, 33, 226);
         font-size: 7rem;
       }
@@ -913,42 +913,43 @@
 
   // ---------- Body ----------
 
-  .assetContainer{
+  .assetContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 9rem;
     padding: 2rem;
-  
-    .chatContainer{
+
+    .chatContainer {
       width: 70rem;
       height: 70rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      border-radius: 1.2rem;
     }
-  
-    .leftContainer{
+
+    .leftContainer {
       width: 81rem;
 
-      .videoContainer{
-        width: 80rem;   // 16
+      .videoContainer {
+        width: 80rem; // 16
         height: 45.5rem; // 9
         border: solid red;
         border-radius: 0.5rem;
       }
 
-      .bottomContainer{
+      .bottomContainer {
         height: 24rem;
         display: flex;
         margin-top: 2rem;
         padding: 0.75rem;
 
-        .werbung{
+        .werbung {
           height: 100%;
         }
 
-        .command{
+        .command {
           color: rgb(26, 25, 25);
           font-size: 6rem;
           font-weight: 700;
@@ -956,14 +957,13 @@
           text-shadow: 0.1rem 0.1rem 1rem #f8c29a;
         }
 
-        .textContent{
+        .textContent {
           color: #aeaeae;
           font-size: 2.5rem;
           padding: 0 2.5rem;
         }
       }
     }
-    
   }
 }
 
