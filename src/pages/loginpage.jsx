@@ -17,13 +17,13 @@ export const Login = () => {
     try {
       const res = await fetch(`${backendURL}/login`, {
         method: "POST",
-        credentials: "include",
 
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(loginData),
+        credentials: "include",
       });
 
       const userToken = await res.json();
