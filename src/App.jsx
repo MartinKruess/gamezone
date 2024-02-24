@@ -21,6 +21,7 @@ import { StreamBG } from "./pages/streamBG";
 // import { CreateMerchArticle } from "./pages/management/createMerchArticle";
 
 export const backendURL = "https://gamezone.cyclic.app/";
+// export const backendURL = "http://localhost:5500/";
 
 function App() {
   return (

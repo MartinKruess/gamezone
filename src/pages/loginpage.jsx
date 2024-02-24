@@ -7,17 +7,14 @@ export const Login = () => {
   const { setToken } = useContext(AppContext);
   const [loginName, setLoginName] = useState("");
   const [password, setPassword] = useState("");
-  const loginData = {
-    username: loginName,
-    password: password,
-  };
-  useEffect(() => {
-    console.log("loginData", loginData);
-  }, [password]);
 
   const onLogin = async (e) => {
     e.preventDefault();
-    if (loginName && password) {
+    const loginData = {
+      username: e.target.username.value,
+      password: e.target.password.value,
+    };
+    try {
       const res = await fetch(`${backendURL}/login`, {
         method: "POST",
         credentials: "include",
@@ -36,19 +33,19 @@ export const Login = () => {
       saveInLocalStorage("auth", resData.auth);
       saveInLocalStorage("user", resData.userData);
       res.status === 200 && useNavigate("/dashboard", { replace: true });
+    } catch (error) {
+      console.log("Error", error, res);
     }
   };
 
   return (
     <section className="loginPage">
-      <form className="loginContainer" action="">
-        <label htmlFor="">Login</label>
-        <input onChange={(e) => setLoginName(e.target.value)} type="text" />
-        <label htmlFor="">Password</label>
-        <input onChange={(e) => setPassword(e.target.value)} type="password" />
-        <button onClick={onLogin} type="submit">
-          Login
-        </button>
+      <form className="loginContainer" onSubmit={onLogin}>
+        <label htmlFor="username">Login</label>
+        <input name="username" type="text" id="username" />
+        <label htmlFor="pw">Password</label>
+        <input name="password" type="password" id="pw" />
+        <button type="submit">Login</button>
       </form>
     </section>
   );
