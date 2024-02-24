@@ -1,4 +1,4 @@
-import { Termine } from "./termine";
+import { Termine } from "../global/termine";
 
 export const Streamplan = () => {
   const streamPlanDetails = [
