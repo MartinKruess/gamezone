@@ -2,11 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { backendURL } from "../App";
 import { AppContext } from "../global/useContext";
 import { Navigate, useNavigate } from "react-router-dom";
+import { saveInLocalStorage } from "../global/localstorage";
 
 export const Login = () => {
   const { setToken } = useContext(AppContext);
-  const [loginName, setLoginName] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -26,15 +26,13 @@ export const Login = () => {
         body: JSON.stringify(loginData),
       });
 
-      const resData = await res.json();
-      console.log("resData", resData);
-      setToken(resData.auth);
-      setUserData(resData.userData);
-      saveInLocalStorage("auth", resData.auth);
-      saveInLocalStorage("user", resData.userData);
-      res.status === 200 && useNavigate("/dashboard", { replace: true });
+      const userToken = await res.json();
+      console.log("resData", userToken);
+      setToken(userToken.auth);
+      saveInLocalStorage("auth", userToken.auth);
+      userToken.isLogedIn && navigate("/dashboard", { replace: true });
     } catch (error) {
-      console.log("Error", error, res);
+      console.log("Error", error);
     }
   };
 
